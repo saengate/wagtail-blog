@@ -1,0 +1,166 @@
+#!/bin/bash
+#-*- ENCODING: UTF-8 -*-
+
+container=django
+container_ports='-p 23:22 -p 7000:80 -p 7001:8080 -p 7002:5555'
+description_ports="
+        80      nginx
+        5555    flower
+        8001    airflow
+        23      ssh
+"
+django=true
+
+# Num  Colour    #define         R G B
+# 0    black     COLOR_BLACK     0,0,0
+# 1    red       COLOR_RED       1,0,0
+# 2    green     COLOR_GREEN     0,1,0
+# 3    yellow    COLOR_YELLOW    1,1,0
+# 4    blue      COLOR_BLUE      0,0,1
+# 5    magenta   COLOR_MAGENTA   1,0,1
+# 6    cyan      COLOR_CYAN      0,1,1
+# 7    white     COLOR_WHITE     1,1,1
+
+NC=`tput sgr0`
+RED=`tput setaf 1`
+GREEN=`tput setaf 2`
+CYAN=`tput setaf 6`
+env=
+force=
+
+help()
+{
+    echo "${CYAN}
+    Ayuda: Comandos de ayuda para facilitar el uso del proyecto:
+    Abre los puertos:
+        $description_ports
+
+    -h  | * | --help   muestran los comandos disponibles
+
+    -b  | --build (arg -f ) construye el contenedor, -f = --no-cache        (docker build)
+    -r  | --run             inicia y accede al contenedor                   (docker run -it)
+    -rv | --run_v           inicia y accede al contenedor y agrega          (docker run -it)
+                            el volumen para los cambios en ansible
+                            tengan efecto inmediato
+    
+    ## VAULT
+    -ve | --vault_encrypt [ dev | qa | prod ]   Encrypta los valores sensibles del ambiente     (ansible-vault encrypt)
+                                                especificado
+    -vd | --vault_decrypt [ dev | qa | prod ]   Desencrypta los valores sensibles del ambiente  (ansible-vault decrypt)
+                                                especificado
+    -vr | --vault_rekey   [ dev | qa | prod ]   Cambia la llave de encryptación del ambiente    (ansible-vault rekey)
+                                                especificado
+    -vv | --vault_view    [ dev | qa | prod ]   Muestra los valores del ambiente especificado   (ansible-vault view)
+    ${NC}
+    ${RED}Recuerda estar dentro de la carpeta del contenedor $container antes de ejecutar estos comandos ${NC}
+    "
+}
+
+default_env()
+{
+    while [ "$1" != "" ]; do
+        case $1 in
+            dev )           env=develop
+                            ;;
+            qa )            env=qa
+                            ;;
+            prod )          env=production
+                            ;;
+            * )             echo "${RED}Los ambientes por defecto para el vault son: [ dev | qa | prod ]${NC}"
+                            exit 1
+        esac
+        shift
+    done
+}
+
+build()
+{
+    echo "${GREEN}Contruyendo imagen a partir del dockerfile para $container ${NC}";
+    if [ "$1" == "-f" ]; then
+        docker build --no-cache -t $container .;
+    else
+        docker build -t $container .;
+    fi
+}
+
+run()
+{
+    echo "${GREEN}Iniciando contenedor $container ${NC}";
+    docker run $container_ports --rm -it --name $container $container;
+}
+
+run_v(){
+    if [ "$1" == "" ]; then
+        echo "${GREEN}Inciando contenedor $container con volumen a carpeta ansible ${NC}";
+        docker run -v $(pwd)/ansible:/root/ansible $container_ports --rm -it --name $container $container;
+    else
+        echo "${GREEN}Inciando contenedor $container con volumen a carpeta ansible y el proyecto ${NC}";
+        docker run -v $(pwd)/ansible:/tmp/ansible -v $(pwd):/webapps/django $container_ports --rm -it --name $container $container;
+    fi
+}
+
+vault_encrypt()
+{
+    default_env $1;
+    echo "${GREEN}Encryptando las contraseñas del vault para el ambiente '$env' ${NC}";
+    ansible-vault encrypt ansible/group_vars/$env/vault.yml;
+}
+
+vault_decrypt()
+{
+    default_env $1;
+    echo "${GREEN}Desencryptando las contraseñas del vault para el ambiente '$env' ${NC}";
+    ansible-vault decrypt ansible/group_vars/$env/vault.yml;
+}
+
+vault_rekey()
+{
+    default_env $1;
+    echo "${GREEN}Cambiar las contraseñas del vault para el ambiente '$env' ${NC}";
+    ansible-vault rekey ansible/group_vars/$env/vault.yml;
+}
+
+vault_view()
+{
+    default_env $1;
+    echo "${GREEN}Mostrar las contraseñas del vault para el ambiente $env ${NC}";
+    ansible-vault view ansible/group_vars/$env/vault.yml;
+}
+
+if [ "$1" == "" ]; then
+    help
+    exit 1
+fi
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -b | --build )          build $2
+                                exit
+                                ;;
+        -r | --run )            run
+                                exit
+                                ;;
+        -rv | --run_v )         run_v $django
+                                exit
+                                ;;
+        -ve | --vault_encrypt ) vault_encrypt $2
+                                exit
+                                ;;
+        -vd | --vault_decrypt ) vault_decrypt $2
+                                exit
+                                ;;
+        -vr | --vault_rekey )   vault_rekey $2
+                                exit
+                                ;;
+        -vv | --vault_view )    vault_view $2
+                                exit
+                                ;;
+        -h | --help )           help
+                                exit
+                                ;;
+        * )                     help
+                                exit 1
+    esac
+    shift
+done
+

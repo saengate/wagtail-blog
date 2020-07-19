@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "django"
+description = "Imagen de Django 2.2.13/VueJs con Nginx, PostgreSQL, Neo4j y Apache Airflow."
+
+license = "Apache-2.0"
+
+authors = [
+    "Saúl Galán <saengate@gmail.com>"
+]
+
+readme = 'README.md'  # Markdown files are supported
+
+repository = "https://github.com/saengate/django"
+homepage = "https://github.com/saengate/django"
+
+keywords = ['packaging', 'poetry']
+
+[tool.poetry.dependencies]
+# https://python-poetry.org/docs/dependency-specification/
+python = "~3.7"
+Django = "^2.2"
+djangorestframework = "^3.10"
+djangotoolbox = "^1.8"
+nose = "^1.3"
+python-dateutil = "^2.8"
+requests = "^2.22"
+unittest-tap-reporting = "^0.2"
+unittest-xml-reporting = "^2.5"
+urllib3 = "^1.25"
+pandas = "^0.23"
+daphne = "^2.4"
+gunicorn = "^19.10"
+gevent = "^1.4"
+redis = "^3.2"
+django-watchman = "^0.18"
+asgiref = "^3.2"
+channels = "^2.3"
+channels_redis = "^2.4"
+psycopg2 = "^2.8"
+celery = "^4.4"
+apache-airflow = { version = "^1.10", extras = [ "postgres", "celery", "redis", "crypto" ] }
+django_neomodel = "*"
+termcolor = "^1.1"
+django-easy-audit = "^1.2"

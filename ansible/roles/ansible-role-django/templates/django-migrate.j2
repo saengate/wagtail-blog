@@ -1,0 +1,14 @@
+#!/bin/bash
+#-*- ENCODING: UTF-8 -*-
+
+main()
+{
+    source {{ path_venv }}/bin/activate;
+    cd /webapps/project;
+    ./manage.py makemigrations --noinput;
+    ./manage.py migrate --noinput;
+    ./manage.py collectstatic --noinput;
+    ./manage.py install_labels;
+}
+
+main

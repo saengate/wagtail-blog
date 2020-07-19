@@ -1,0 +1,39 @@
+language: ruby
+cache: bundler
+os: linux
+dist: xenial
+services:
+  - docker
+
+env:
+  global:
+  - "DOCKER_COMPOSE_VERSION=1.23.2"
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y openssl
+
+before_script:
+  - docker build --no-cache --target base-test -t django .
+
+# Si este script falla puede deberse a que se cambio la raiz o el nombre del proyecto en el dockerfile
+script:
+  - docker run --rm -it --name django django /bin/bash -c "source /opt/venv/bin/activate && ./manage.py test";
+
+after_script:
+  - docker container stop django
+  - docker container rm django
+
+after_success:
+  # Push successful builds of the master branch to Docker Hub
+  # You need to define $DOCKER_REPO_PREFIX, $DOCKER_REPO_NAME, $DOCKER_USERNAME and $DOCKER_PASSWORD in your Travis settings.
+  # $DOCKER_REPO_PREFIX - Organisation of username who owns the repo on Docker Hub
+  # $DOCKER_REPO_NAME   - Repository name on Docker Hub
+  # $DOCKER_USERNAME    - Docker Hub username used to push the image
+  # $DOCKER_PASSWORD    - Password of the Docker Hub user used to push the image
+  # See https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings
+  - if [ "$TRAVIS_PULL_REQUEST" = "false" ] && [ "$TRAVIS_BRANCH" == "master" ] && [ "$DOCKER_REPO_PREFIX" != "" ] && [ "$DOCKER_REPO_NAME" != "" ] && [ "$DOCKER_USERNAME" != "" ] && [ "$DOCKER_PASSWORD" != "" ]; then
+    docker images "${DOCKER_REPO_PREFIX}/${DOCKER_REPO_NAME}";
+    echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin;
+    docker run --rm -v "$(pwd)/:/data/:ro" -e "DOCKERHUB_USERNAME=$DOCKER_USERNAME" -e "DOCKERHUB_PASSWORD=$DOCKER_PASSWORD" -e "DOCKERHUB_REPO_PREFIX=$DOCKER_REPO_PREFIX" -e "DOCKERHUB_REPO_NAME=$DOCKER_REPO_NAME" sheogorath/readme-to-dockerhub;
+    fi

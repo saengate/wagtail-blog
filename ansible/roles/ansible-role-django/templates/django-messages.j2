@@ -1,0 +1,12 @@
+#!/bin/bash
+#-*- ENCODING: UTF-8 -*-
+
+main()
+{
+    source {{ path_venv }}/bin/activate;
+    cd /webapps/project;
+    django-admin makemessages -a;
+    django-admin compilemessages;
+}
+
+main

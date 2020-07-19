@@ -1,0 +1,5 @@
+---
+- hosts: develop
+  roles:
+    - { role: ansible-role-django }
+...
