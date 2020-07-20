@@ -48,7 +48,7 @@
       group: "{{ group }}"
 
   - name: Mover directorio a {{ project_name }}/{{ project_name }}
-    command: mv /tmp/project "{{ home }}"
+    command: mv /tmp/django "{{ home }}"
 
   - name: Creando archivo de log para el projecto
     file:
@@ -80,8 +80,8 @@
       group: "{{ group }}"
       mode: 0755
     with_items:
-      - project_start
-      - project_websocket_start
+      - django_start
+      - django_websocket_start
       - airflow-flower
       - airflow-scheduler
       - airflow-server
@@ -109,7 +109,7 @@
 
   - name: Supervisor app | Update configuration (app.supervisor.conf)
     template:
-      src: project.supervisor.conf.j2
+      src: django.supervisor.conf.j2
       dest: "/etc/supervisor/conf.d/programs.conf"
       owner: "{{ user }}"
       group: "{{ group }}"

@@ -51,10 +51,10 @@ translate()
     django-messages;
 }
 
-logproject()
+logdjango()
 {
     echo "${GREEN}Logs del projecto${NC}";
-    tail -100f /var/log/project/project.log;
+    tail -100f /var/log/django/django.log;
 }
 
 logsupervisor()
@@ -66,7 +66,7 @@ logsupervisor()
 logwebsocket()
 {
     echo "${GREEN}Logs del websocket${NC}";
-    tail -100f /var/log/project/websocket_project.log;
+    tail -100f /var/log/django/websocket_django.log;
 }
 
 help()
@@ -81,7 +81,7 @@ help()
     -ra | --restart-all             Reiniciar supervisor las configuraciones de los programas y Nginx
     -ca | --create-admin            Crea el usuario administrador por defecto de la aplicación
     -t  | --translate               Prepara las traducciones en django
-    -lp | --log-project             Muestra los logs del projecto y uwsgi
+    -lp | --log-django              Muestra los logs del projecto y uwsgi
     -ls | --log-supervisor          Muestra los logs de supervisor
     -lw | --log-websocket           Muestra los logs del websocket
 
@@ -112,7 +112,7 @@ while [ "$1" != "" ]; do
         -t  | --translate )             translate
                                         exit
                                         ;;
-        -lp | --log-project )           logproject
+        -lp | --log-django )            logdjango
                                         exit
                                         ;;
         -ls | --log-supervisor )        logsupervisor

@@ -1,6 +1,7 @@
 [tool.poetry]
-name = "django"
-description = "Imagen de Django 2.2.13/VueJs con Nginx, PostgreSQL, Neo4j y Apache Airflow."
+name = "djfullapp"
+version = "0.1.0"
+description = "Imagen de Django 2.2.13 con Nginx y Apache Airflow."
 
 license = "Apache-2.0"
 

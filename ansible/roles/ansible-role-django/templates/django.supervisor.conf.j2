@@ -1,5 +1,5 @@
 [program:{{ project_name }}]
-command=/usr/local/bin/project_start                                            ; Command to start app
+command=/usr/local/bin/django_start                                            ; Command to start app
 user={{ user }}                                                                 ; User to run as
 stdout_logfile=/var/log/{{ project_name }}/{{ project_name }}.log               ; Where to write log messages
 redirect_stderr=true                                                            ; Save stderr in the same log
@@ -13,9 +13,9 @@ environment=LANG=en_US.UTF-8,LC_ALL=en_US.UTF-8                                 
 
 [program:{{ project_name }}-websocket]
 socket={{ web_socket }}
-command=/usr/local/bin/project_websocket_start                                  ; Command to start app
+command=/usr/local/bin/django_websocket_start                                  ; Command to start app
 user={{ user }}                                                                 ; User to run as
-stdout_logfile=/var/log/{{ project_name }}/websocket_project.log                ; Where to write log messages
+stdout_logfile=/var/log/{{ project_name }}/websocket_django.log                ; Where to write log messages
 redirect_stderr=true                                                            ; Save stderr in the same log
 stopasgroup=true
 # Number of processes to startup, roughly the number of CPUs you have

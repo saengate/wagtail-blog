@@ -4,7 +4,7 @@
 main()
 {
     source {{ path_venv }}/bin/activate;
-    cd /webapps/project;
+    cd {{ home }}/{{ project_name }};
     ./manage.py makemigrations --noinput;
     ./manage.py migrate --noinput;
     ./manage.py collectstatic --noinput;

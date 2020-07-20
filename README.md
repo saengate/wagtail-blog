@@ -88,10 +88,7 @@ docker run -v $(pwd)/ansible:/tmp/ansible -p 23:22 -p 8000:80 -p 5050:5555 -p 80
 
 Para validar que los servicios estan arriba al usar docker
 ```sh
-nmap 0.0.0.0 -p 80 | grep -i tcp
-nmap 0.0.0.0 -p 23 | grep -i tcp
-nmap 0.0.0.0 -p 5555 | grep -i tcp
-nmap 0.0.0.0 -p 8001 | grep -i tcp
+nmap 0.0.0.0 -p 23,80,5555,8001 | grep -i tcp
 ```
 
 Para cambiar la clave del vault en Ansible (debe estar parado en esta directorio)
