@@ -1,3 +1,4 @@
+"""
 from channels.auth import AuthMiddlewareStack
 from channels.routing import (
     ProtocolTypeRouter,
@@ -20,3 +21,4 @@ application = ProtocolTypeRouter({
         settings.WS_ALLOWED_HOSTS,
     ),
 })
+"""

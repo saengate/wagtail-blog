@@ -49,11 +49,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'rest_framework',
     'channels',
     'django_neomodel',
     'easyaudit',
-    'ses',
 ]
 
 MIDDLEWARE = [
@@ -89,7 +89,9 @@ REST_FRAMEWORK = {
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(PROJECT_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -115,13 +117,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 }
 """
-# https://pypi.org/project/django_neomodel/
-
-NEOMODEL_NEO4J_BOLT_URL = 'bolt://neo4j:neo4j@djfullapp-neo4j:7687'
-NEOMODEL_SIGNALS = True
-NEOMODEL_FORCE_TIMEZONE = False
-NEOMODEL_ENCRYPTED_CONNECTION = True
-NEOMODEL_MAX_POOL_SIZE = 50
 
 DATABASES = {
     'default': {
@@ -129,7 +124,7 @@ DATABASES = {
         'NAME': 'djfullappdb',
         'USER': 'userdb',
         'PASSWORD': 'password',
-        'HOST': 'djfullapp-db',
+        'HOST': 'wagtail-db',
         'PORT': '5432',
     }
 }
@@ -299,3 +294,65 @@ DJANGO_EASY_AUDIT_CRUD_EVENT_NO_CHANGED_FIELDS_SKIP = True
 DJANGO_EASY_AUDIT_READONLY_EVENTS = True
 
 # DJANGO_EASY_AUDIT_LOGGING_BACKEND = 'easyaudit.backends.ModelBackend'
+
+# WAGTAIL SETTINGS
+
+INSTALLED_APPS += [
+    'home',
+    'search',
+
+    'wagtail.contrib.forms',
+    'wagtail.contrib.redirects',
+    'wagtail.embeds',
+    'wagtail.sites',
+    'wagtail.users',
+    'wagtail.snippets',
+    'wagtail.documents',
+    'wagtail.images',
+    'wagtail.search',
+    'wagtail.admin',
+    'wagtail.core',
+
+    'taggit',
+    'modelcluster',
+]
+
+MIDDLEWARE += [
+    'wagtail.core.middleware.SiteMiddleware',
+    'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+]
+
+ADMINS = [
+    ('Saúl Galán', 'saengate@gmail.com'),
+]
+MANAGERS = ADMINS
+
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+EMAIL_SUBJECT_PREFIX = '[Blog SaenGate] '
+
+INTERNAL_IPS = ('127.0.0.1', '10.0.2.2')
+
+# This is the human-readable name of your Wagtail install
+# which welcomes users upon login to the Wagtail admin.
+WAGTAIL_SITE_NAME = 'Blog SaenGate'
+
+# Override the search results template for wagtailsearch
+# WAGTAILSEARCH_RESULTS_TEMPLATE = 'myapp/search_results.html'
+# WAGTAILSEARCH_RESULTS_TEMPLATE_AJAX = 'myapp/includes/search_listing.html'
+
+# Replace the search backend
+# WAGTAILSEARCH_BACKENDS = {
+#  'default': {
+#    'BACKEND': 'wagtail.search.backends.elasticsearch2',
+#    'INDEX': 'myapp'
+#  }
+# }
+
+# Wagtail email notifications from address
+# WAGTAILADMIN_NOTIFICATION_FROM_EMAIL = 'wagtail@myhost.io'
+
+# Wagtail email notification format
+# WAGTAILADMIN_NOTIFICATION_USE_HTML = True
+
+# Reverse the default case-sensitive handling of tags
+TAGGIT_CASE_INSENSITIVE = True

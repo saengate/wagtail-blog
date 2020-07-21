@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "djfullapp"
+name = "wagtail-blog"
 version = "0.1.0"
 description = "Imagen de Django 2.2.13 con Nginx y Apache Airflow."
 
@@ -11,15 +11,15 @@ authors = [
 
 readme = 'README.md'  # Markdown files are supported
 
-repository = "https://github.com/saengate/django"
-homepage = "https://github.com/saengate/django"
+repository = "https://github.com/saengate/wagtail-blog"
+homepage = "https://github.com/saengate/wagtail-blog"
 
 keywords = ['packaging', 'poetry']
 
 [tool.poetry.dependencies]
 # https://python-poetry.org/docs/dependency-specification/
 python = "~3.7"
-Django = "^2.2"
+Django = "^3.0"
 djangorestframework = "^3.10"
 djangotoolbox = "^1.8"
 nose = "^1.3"
@@ -43,3 +43,4 @@ apache-airflow = { version = "^1.10", extras = [ "postgres", "celery", "redis", 
 django_neomodel = "*"
 termcolor = "^1.1"
 django-easy-audit = "^1.2"
+wagtail = "^2.9."
