@@ -10,7 +10,6 @@ from blog.routing import websocket_urlpatterns
 
 application = ProtocolTypeRouter({
     # No acepta conexiones distintas a las del websocket
-    'http': None,
     'websocket': OriginValidator(
         AuthMiddlewareStack(
             URLRouter(

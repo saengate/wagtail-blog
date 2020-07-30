@@ -17,6 +17,7 @@ from rest_framework import compat
 
 from utils.color_logging import formatter
 
+
 # I have the same issue, but poetry does not allow me to update Markdown to from 2.6.11 to 3+
 # because apache-airflow (1.10.10) depends on markdown (>=2.5.2,<3.0)
 compat.md_filter_add_syntax_highlight = lambda md: False
@@ -121,12 +122,12 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djfullappdb',
+        'NAME': 'wagtaildb',
         'USER': 'userdb',
         'PASSWORD': 'password',
         'HOST': 'wagtail-db',
         'PORT': '5432',
-    }
+    },
 }
 
 
@@ -188,7 +189,9 @@ LOCALE_PATHS = [
 LANGUAGE_CODE = 'es-cl'
 # LANGUAGE_CODE = 'en-us'
 
-_ = lambda s: s  # NOQA
+
+def _(s): return s  # NOQA
+
 
 LANGUAGES = [
     ('es', _('Espanish')),
@@ -281,7 +284,7 @@ DJANGO_EASY_AUDIT_WATCH_REQUEST_EVENTS = True
 # This is reserved for future use (does not do anything yet) 1.2.2
 # DJANGO_EASY_AUDIT_USER_DB_CONSTRAINT = 'default'
 
-# DJANGO_EASY_AUDIT_CRUD_EVENT_LIST_FILTER = ['event_type', 'content_type', 'user', 'datetime', ] 
+# DJANGO_EASY_AUDIT_CRUD_EVENT_LIST_FILTER = ['event_type', 'content_type', 'user', 'datetime', ]
 # DJANGO_EASY_AUDIT_LOGIN_EVENT_LIST_FILTER = ['login_type', 'user', 'datetime', ]
 # DJANGO_EASY_AUDIT_REQUEST_EVENT_LIST_FILTER = ['method', 'user', 'datetime', ]
 
@@ -300,6 +303,7 @@ DJANGO_EASY_AUDIT_READONLY_EVENTS = True
 INSTALLED_APPS += [
     'home',
     'search',
+    'blog',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -312,14 +316,17 @@ INSTALLED_APPS += [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
+    'wagtail.api.v2',
 
     'taggit',
     'modelcluster',
+    'corsheaders',  # https://pypi.org/project/django-cors-headers/
 ]
 
 MIDDLEWARE += [
     'wagtail.core.middleware.SiteMiddleware',
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ADMINS = [
@@ -356,3 +363,11 @@ WAGTAIL_SITE_NAME = 'Blog SaenGate'
 
 # Reverse the default case-sensitive handling of tags
 TAGGIT_CASE_INSENSITIVE = True
+
+# CORS config https://pypi.org/project/django-cors-headers/
+CORS_ORIGIN_ALLOW_ALL = True
+
+# CORS_ORIGIN_WHITELIST = [
+#     "http://localhost:7000",
+#     "http://127.0.0.1:7000"
+# ]
