@@ -28,7 +28,6 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        ".vscode": true,
         "**/*.pyc": true,
     },
 	"workbench.editor.enablePreview": false,

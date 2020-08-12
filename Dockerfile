@@ -2,7 +2,7 @@ FROM nginx:stable as base-develop
 
 RUN apt-get update -q
 RUN apt-get install -qy python3-pip python3-venv python3-dev openssh-server openssh-client
-RUN apt-get install -qy nano curl supervisor libpq-dev apt-utils gettext apt-utils
+RUN apt-get install -qy nano curl supervisor libpq-dev apt-utils gettext apt-utils git
 RUN pip3 install --upgrade pip
 RUN pip3 install ansible virtualenv
 
@@ -38,7 +38,7 @@ RUN service ssh start && ssh-keyscan -H localhost >>~/.ssh/known_hosts && ansibl
 # Directorio del proyecto, debe modificarse si se cambia el directorio original
 # Su cambio provocara un fallo en travis
 WORKDIR /webapps/django
-EXPOSE 22 80 5555 8080 9000
+EXPOSE 22 80 5555 7000 7001 8080
 
 # Se sobreescribe en el docker-compose.yml para ejecutar las migraciones
 CMD [ "bash", \

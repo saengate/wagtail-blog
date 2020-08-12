@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
+import pygments.formatters
 import os
 
 from os import getenv
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'channels',
     'django_neomodel',
     'easyaudit',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -361,6 +363,10 @@ WAGTAIL_SITE_NAME = 'Blog SaenGate'
 # Wagtail email notification format
 # WAGTAILADMIN_NOTIFICATION_USE_HTML = True
 
+WAGTAILIMAGES_FORMAT_CONVERSIONS = {
+    'bmp': 'jpeg',
+}
+
 # Reverse the default case-sensitive handling of tags
 TAGGIT_CASE_INSENSITIVE = True
 
@@ -371,3 +377,39 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     "http://localhost:7000",
 #     "http://127.0.0.1:7000"
 # ]
+
+# https://django-extensions.readthedocs.io/en/latest/shell_plus.html
+# ./manage.py shell_plus --notebook
+# Always use IPython for shell_plus
+SHELL_PLUS = "ipython"
+SHELL_PLUS_PRINT_SQL = True
+# Truncate sql queries to this number of characters (this is the default)
+SHELL_PLUS_PRINT_SQL_TRUNCATE = 1000
+# To disable truncation of sql queries use
+SHELL_PLUS_PRINT_SQL_TRUNCATE = None
+# Specify sqlparse configuration options when printing sql queries to the console
+SHELL_PLUS_SQLPARSE_FORMAT_KWARGS = dict(
+    reindent_aligned=True,
+    truncate_strings=500,
+)
+
+# Specify Pygments formatter and configuration options when printing sql queries to the console
+SHELL_PLUS_PYGMENTS_FORMATTER = pygments.formatters.TerminalFormatter
+SHELL_PLUS_PYGMENTS_FORMATTER_KWARGS = {}
+
+# Additional IPython arguments to use
+IPYTHON_ARGUMENTS = [
+    '--ext', 'django_extensions.management.notebook_extension',
+    '--debug',
+]
+
+IPYTHON_KERNEL_DISPLAY_NAME = "Django Shell-Plus"
+# Additional Notebook arguments to use
+NOTEBOOK_ARGUMENTS = []
+NOTEBOOK_KERNEL_SPEC_NAMES = ["python3", "python"]
+
+NOTEBOOK_ARGUMENTS = [
+    '--allow-root',
+    '--ip', '0.0.0.0',
+    '--port', '7001',
+]

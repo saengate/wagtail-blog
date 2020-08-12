@@ -98,3 +98,10 @@ ansible-vault decrypt ansible/group_vars/develop/vault.yml
 ansible-vault rekey ansible/group_vars/develop/vault.yml
 ansible-vault view ansible/group_vars/develop/vault.yml
 ```
+
+Shell
+```sh
+./manage.py shell_plus --notebook
+```
+
+pip install django-easy-audit==1.3.0a4

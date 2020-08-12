@@ -6,7 +6,6 @@ from wagtail.core.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.api import APIField
 
-
 # Create your models here.
 
 
