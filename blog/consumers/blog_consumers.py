@@ -41,7 +41,7 @@ class BLOGConsumer(WebsocketConsumer):
         )
 
     def model_update(self, event):
-        logger.info(f"Sending data update.")
+        logger.info("Sending data update.")
         text_data = {
             'type': 'msg.message',
             'message': json.dumps(event),

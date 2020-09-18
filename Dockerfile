@@ -2,9 +2,17 @@ FROM nginx:stable as base-develop
 
 RUN apt-get update -q
 RUN apt-get install -qy python3-pip python3-venv python3-dev openssh-server openssh-client
-RUN apt-get install -qy nano curl supervisor libpq-dev apt-utils gettext apt-utils git
+RUN apt-get install -qy nano curl supervisor libpq-dev apt-utils gettext apt-utils 
+# RUN apt-get install -qy postgresql build-essential gcc postgresql-contrib
+RUN apt-get install -qy git groff gnupg2
 RUN pip3 install --upgrade pip
 RUN pip3 install ansible virtualenv
+
+# Oh my zsh
+RUN apt-get install zsh -qy
+RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+RUN git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+RUN sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 
 # Install and configure SSH
 RUN mkdir /var/run/sshd
@@ -44,10 +52,10 @@ EXPOSE 22 80 5555 7000 7001 8080
 CMD [ "bash", \
     "-c", \
     "service supervisor start &&    \
-        supervisorctl reread &&         \
-        supervisorctl update &&         \
-        supervisorctl start all &&      \
-        service ssh start &&            \
-        service nginx start &&          \
-        /bin/bash" \
+    supervisorctl reread &&         \
+    supervisorctl update &&         \
+    supervisorctl start all &&      \
+    service ssh start &&            \
+    service nginx start &&          \
+    /bin/zsh" \
     ]

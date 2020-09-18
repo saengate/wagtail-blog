@@ -12,9 +12,8 @@ from wagtail.contrib.forms.models import (
     AbstractEmailForm,
     AbstractFormField,
 )
-from rest_framework import serializers
-
-# Create your models here.
+from wagtailcache.cache import WagtailCacheMixin, cache_page
+from django.utils.decorators import method_decorator
 
 
 class FormField(AbstractFormField):
@@ -24,16 +23,21 @@ class FormField(AbstractFormField):
         related_name='form_fields',
     )
 
+    api_fields = [
+        APIField('label'),
+        APIField('help_text'),
+        APIField('required'),
+        APIField('field_type'),
+        APIField('choices'),
+        APIField('default_value'),
+    ]
 
-class FormFieldsSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = FormField
-        fields = ('__all__')
-        many = True
-        read_only = True
 
+@method_decorator(cache_page, name='serve')
+class ContactPage(WagtailCacheMixin, AbstractEmailForm):
+    template = "contact/contact_page.html"
+    landing_page_template = "contact/contact_page_landing.html"
 
-class ContactPage(AbstractEmailForm):
     intro = RichTextField(blank=True)
     thank_you = RichTextField(blank=True)
 
@@ -55,6 +59,6 @@ class ContactPage(AbstractEmailForm):
 
     api_fields = [
         APIField('intro'),
-        APIField('form_fields', serializer=FormFieldsSerializer()),
+        APIField('form_fields'),
         APIField('thank_you'),
     ]

@@ -11,7 +11,6 @@
             "args": [
                 "runserver",
                 "0.0.0.0:7000",
-                "--noreload",
                 "--settings=config.debug.settings",
             ],
             "django": true
