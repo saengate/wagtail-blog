@@ -43,6 +43,10 @@ RUN poetry export -n --without-hashes -f requirements.txt -o /tmp/requirements.t
 
 WORKDIR /tmp/ansible
 RUN service ssh start && ssh-keyscan -H localhost >>~/.ssh/known_hosts && ansible-playbook config-django.yml
+
+# Change UTC
+ENV TZ="America/Santiago"
+
 # Directorio del proyecto, debe modificarse si se cambia el directorio original
 # Su cambio provocara un fallo en travis
 WORKDIR /webapps/django
