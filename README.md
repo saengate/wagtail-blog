@@ -104,4 +104,36 @@ Shell
 ./manage.py shell_plus --notebook
 ```
 
-pip install django-easy-audit==1.3.0a4
+Debe existir un bucket en AWS S3
+Debes crear en VPC un endpoint para el servicio de S3
+# Deploy commands
+* poetry lock --no-update
+* poetry export -n --without-hashes -f requirements.txt -o requirements.txt
+
+* `zappa deploy production` firts deploy in web
+
+* `zappa update production` update web
+
+## Migrations
+
+* `zappa manage production migrate`
+
+
+
+# https://aws.amazon.com/es/getting-started/hands-on/configure-connect-serverless-mysql-database-aurora/
+
+https://us-east-1.console.aws.amazon.com/cloud9/ide/62871adac73d4c8a80b65d51d776f488
+
+mysql --user=[your Master username] --password -h [your database endpoint]
+
+DATABASE_HOST	wagtail.czdeyx0up9tn.us-east-1.rds.amazonaws.com
+DATABASE_NAME	wagtaildb_prod
+DATABASE_PASSWORD	PG5432.4dm1n-U$ER:P4ss
+DATABASE_PORT	5432
+DATABASE_USER	saengate_db
+ENV	production
+REDIS_HOST	redis.neby3x.0001.use1.cache.amazonaws.com:6379
+
+
+aun no se si esto es util para zappa.
+zappa undeploy production --remove-logs

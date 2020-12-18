@@ -13,7 +13,7 @@
 	"python.linting.flake8Enabled": true,
 	"python.linting.pylintEnabled": false,
 
-	"terminal.integrated.shell.linux": "/bin/bash",
+	"terminal.integrated.shell.linux": "/bin/zsh",
 	"python.formatting.autopep8Path": "/opt/venv/bin/autopep8",
 	"python.linting.flake8Path": "/opt/venv/bin/flake8",
 

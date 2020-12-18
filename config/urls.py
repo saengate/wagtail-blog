@@ -75,3 +75,6 @@ if settings.DEBUG:
 urlpatterns += [
     url('', include(wagtail_urls)),
 ]
+
+
+# ./manage.py show_url

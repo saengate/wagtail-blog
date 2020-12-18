@@ -111,11 +111,10 @@ venv.bak/
 .idea/
 .DS_Store
 
-data/
-poetry.lock
-
 static/*
 !static/blog/images/favicon.ico
 staticfiles/*
 media/*
 !*/.gitkeep
+*.ipynb
+*saengateblog-production*

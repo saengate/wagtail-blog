@@ -6,13 +6,14 @@ RUN apt-get install -qy nano curl supervisor libpq-dev apt-utils gettext apt-uti
 # RUN apt-get install -qy postgresql build-essential gcc postgresql-contrib
 RUN apt-get install -qy git groff gnupg2
 RUN pip3 install --upgrade pip
-RUN pip3 install ansible virtualenv
+RUN pip3 install ansible==2.9 virtualenv
 
 # Oh my zsh
 RUN apt-get install zsh -qy
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 RUN git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 RUN sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
+COPY zshrc ~/.zshrc
 
 # Install and configure SSH
 RUN mkdir /var/run/sshd
@@ -39,6 +40,7 @@ COPY ./pyproject.toml ./
 COPY ./ ./django
 
 RUN sed -i 's|#!/usr/bin/env python|#!/usr/bin/env python3|g' ~/.poetry/bin/poetry
+RUN poetry lock --no-update
 RUN poetry export -n --without-hashes -f requirements.txt -o /tmp/requirements.txt --dev
 
 WORKDIR /tmp/ansible
@@ -47,19 +49,32 @@ RUN service ssh start && ssh-keyscan -H localhost >>~/.ssh/known_hosts && ansibl
 # Change UTC
 ENV TZ="America/Santiago"
 
+# INIT AWS config credentials
+ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS
+ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET
+ENV AWS_DEFAULT_REGION=$AWS_REGION
+
+ARG AWS_ACCESS=$AWS_ACCESS
+ARG AWS_SECRET=$AWS_SECRET
+ARG AWS_REGION=$AWS_REGION
+
+RUN mkdir -p /root/.aws
+
+RUN echo "[default]" >> /root/.aws/credentials
+RUN echo "aws_access_key_id=${AWS_ACCESS}" >> /root/.aws/credentials
+RUN echo "aws_secret_access_key=${AWS_SECRET}" >> /root/.aws/credentials
+
+RUN echo "[default]" >> /root/.aws/config
+RUN echo "region=${AWS_REGION}" >> /root/.aws/config
+RUN echo "output=json" >> /root/.aws/config
+
+RUN chmod 600 /root/.aws/*
+# END AWS config credentials
+
 # Directorio del proyecto, debe modificarse si se cambia el directorio original
 # Su cambio provocara un fallo en travis
 WORKDIR /webapps/django
 EXPOSE 22 80 5555 7000 7001 8080
 
 # Se sobreescribe en el docker-compose.yml para ejecutar las migraciones
-CMD [ "bash", \
-    "-c", \
-    "service supervisor start &&    \
-    supervisorctl reread &&         \
-    supervisorctl update &&         \
-    supervisorctl start all &&      \
-    service ssh start &&            \
-    service nginx start &&          \
-    /bin/zsh" \
-    ]
+CMD [ "zsh"]
