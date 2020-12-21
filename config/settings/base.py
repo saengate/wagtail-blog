@@ -8,8 +8,7 @@ from config.core_settings import *  # NOQA
 # SECURITY WARNING: keep the secret key used in production secret!
 # Refer to secret from project Secrets usually PROJECTNAME_SECRET
 
-SECRET_KEY = os.getenv(
-    'SECRET_KEY', "uawjn2ct=00pg)k#1$yu0h*6q*zkr-mq8t9$n__^)l1qpl=oj&")
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 INSTALLED_APPS = INSTALLED_APPS + [  # NOQA
     'wagtail.contrib.forms',
