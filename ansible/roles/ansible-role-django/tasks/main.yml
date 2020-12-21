@@ -40,11 +40,9 @@
       register: folder_stats
       with_items:
         - "{{ home }}/{{ project_name }}"
-        - /var/log/airflow
         - "/var/log/{{ project_name }}"
         - /etc/nginx/sites-enabled
         - /etc/nginx/sites-available
-        - /usr/local/airflow
 
     - name: Crear carpetas de necesarias para el projecto
       file:
@@ -91,18 +89,9 @@
         group: "{{ group }}"
         recurse: yes
       with_items:
-        - /var/log/airflow
         - "/var/log/{{ project_name }}"
 
 - block:
-    - name: Airflow | Update configuration (airflow.cfg)
-      template:
-        src: airflow.cfg.j2
-        dest: "/usr/local/airflow/airflow.cfg"
-        owner: "{{ user }}"
-        group: "{{ group }}"
-        mode: 0644
-
     - name: Preparando los disparadores de la aplicacion
       template:
         src: "{{ item }}.j2"
@@ -112,31 +101,12 @@
         mode: 0755
       with_items:
         - django_start
-        - django_websocket_start
-        - airflow-flower
-        - airflow-scheduler
-        - airflow-server
-        - airflow-worker
         - django-migrate
         - django-messages
         - cmdp
         - venv
         - runsupervisor
         - wait-for-it
-
-    - name: Inicializa variable programas
-      set_fact:
-        queues: "{{ lookup('template', 'queue_vars.yml.j2') | from_yaml }}"
-
-    - name: Preparando los disparadores para las colas
-      template:
-        src: airflow-queue.j2
-        dest: "/usr/local/bin/airflow-queue-{{ item }}"
-        owner: "{{ user }}"
-        group: "{{ group }}"
-        mode: 0755
-      with_items:
-        - "{{ queues }}"
 
     - name: Supervisor app | Update configuration (app.supervisor.conf)
       template:
@@ -181,13 +151,6 @@
       with_items:
         - "/etc/nginx/sites-enabled/{{ project_name }}.conf"
         - "/etc/nginx/conf.d/{{ project_name }}.conf"
-
-    - name: Create symbolic link airflow dags
-      file:
-        src: "{{ home }}/{{ project_name }}/airflow/dags"
-        dest: "/usr/local/airflow/dags"
-        force: yes
-        state: link
 
     - name: Remove Nginx file default file
       file:

@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'corsheaders',  # https://pypi.org/project/django-cors-headers/
     'rest_framework',
     'rest_framework.authtoken',
-    'channels',
     'easyaudit',
     'django_extensions',
     'rest_auth',
+    'zappa_django_utils',
 ]
 
 MIDDLEWARE = [
@@ -160,12 +160,6 @@ LANGUAGES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
-
-# ==============================================================================
-# WEBSOCKETS & CHANNELS
-# ==============================================================================
-
-ASGI_APPLICATION = 'config.routing.application'
 
 # AUDIT [django-easy-audit](https://github.com/soynatan/django-easy-audit)
 

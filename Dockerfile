@@ -37,7 +37,7 @@ WORKDIR /tmp
 
 COPY ./ansible ./ansible
 COPY ./pyproject.toml ./
-COPY ./ ./django
+COPY ./ ./wagtailblog
 
 RUN sed -i 's|#!/usr/bin/env python|#!/usr/bin/env python3|g' ~/.poetry/bin/poetry
 RUN poetry lock --no-update
@@ -73,8 +73,8 @@ RUN chmod 600 /root/.aws/*
 
 # Directorio del proyecto, debe modificarse si se cambia el directorio original
 # Su cambio provocara un fallo en travis
-WORKDIR /webapps/django
-EXPOSE 22 80 5555 7000 7001 8080
+WORKDIR /webapps/wagtailblog
+EXPOSE 80 7000 7001 7002
 
 # Se sobreescribe en el docker-compose.yml para ejecutar las migraciones
 CMD [ "zsh"]

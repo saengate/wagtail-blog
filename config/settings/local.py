@@ -31,26 +31,7 @@ DATABASES = {
     },
 }
 
-INSTALLED_APPS += [  # NOQA
-    'zappa_django_utils',
-]
-
-# ==============================================================================
-# WEBSOCKETS & CHANNELS
-# ==============================================================================
-
 REDIS_HOST = getenv('REDIS_HOST', 'redis://redis:6379')
-
-# It is possible to have multiple channel layers configured.
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [REDIS_HOST],
-        },
-    },
-}
-
 
 WAGTAILAPI_USE_FRONTENDCACHE = True
 WAGTAILAPI_BASE_URL = 'http://0.0.0.0:7000'
@@ -139,7 +120,7 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/var/log/django/django.log',
+            'filename': '/var/log/wagtailblog/wagtailblog.log',
             'maxBytes': 1024 * 1024 * 10,  # 10MB
             'backupCount': 5,
             'formatter': 'standard',

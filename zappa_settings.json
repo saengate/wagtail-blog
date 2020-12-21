@@ -7,27 +7,36 @@
         }
     },
     "production": {
+        "aws_region": "us-east-1",
+        "django_settings": "config.settings.production",
+        "profile_name": "default",
         "project_name": "saengateblog",
         "runtime": "python3.7",
-        "django_settings": "config.settings.production",
-        "aws_region": "us-east-1",
-        "s3_bucket": "zappa-upload-saengate-blog",
-        "vpc_config": {
-            "SubnetIds": [ "subnet-3daf0b5b", "subnet-00ff8b4d", "subnet-724fee2d", "subnet-d742dcd9" ],
-            "SecurityGroupIds": [ "sg-0c277a37" ]
-        },
-        "keep_warm": true,
-        "timeout_seconds": 300,
-        "delete_local_zip": false,
-        "use_precompiled_packages": true,
-        "log_level": "DEBUG",
         "slim_handler": true,
+        "s3_bucket": "zappa-upload-saengate-blog",
+        "timeout_seconds": 900,
+        "manage_roles": false,
+        "role_name": "ZappaDjangoRole",
+        "role_arn": "arn:aws:iam::808038115231:role/ZappaDjangoRole",
+        "vpc_config" : {
+            "SubnetIds": ["subnet-d742dcd9"],
+            "SecurityGroupIds": [ "sg-0c277a37", "sg-09b054a57f1046265", "sg-0a72fc102701838e8", "sg-08459b51386be4d6b" ]
+        },
+        "aws_environment_variables": {
+            "ENV": "production",
+            "DATABASE_NAME": "wagtaildb_prod",
+            "DATABASE_USER": "saengate_db",
+            "DATABASE_PASSWORD": "PG5432.4dm1n-U$ER:P4ss",
+            "DATABASE_HOST": "saengate-blog.czdeyx0up9tn.us-east-1.rds.amazonaws.com",
+            "DATABASE_PORT": "5432",
+            "REDIS_HOST": "redis://redis.neby3x.0001.use1.cache.amazonaws.com:6379"
+        },
         "exclude": [
+            "*.zip",
             "*.devcontainer",
             ".vscode",
             "*.pyc",
             "*.ipynb*",
-            "airflow",
             "ansible",
             "config/debug",
             "__pycache__",
@@ -42,19 +51,8 @@
             "cmdp",
             "Dockerfile",
             "poetry.lock",
-            "pyproject.toml"
-        ],
-        "aws_environment_variables": {
-            "ENV": "production",
-            "DATABASE_NAME": "wagtaildb_prod",
-            "DATABASE_USER": "saengate_db",
-            "DATABASE_PASSWORD": "PG5432.4dm1n-U$ER:P4ss",
-            "DATABASE_HOST": "wagtail.czdeyx0up9tn.us-east-1.rds.amazonaws.com",
-            "DATABASE_PORT": "5432",
-            "REDIS_HOST": "redis.neby3x.0001.use1.cache.amazonaws.com:6379"
-        },
-        "environment_variables": {
-            "IS_LAMBDA": "true"
-        }
+            "pyproject.toml",
+            "zshrc"
+        ]
     }
 }

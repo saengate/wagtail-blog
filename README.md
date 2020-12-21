@@ -78,7 +78,7 @@ docker run -p 23:22 -p 8000:80 -p 5050:5555 -p 8001:8080 -it --rm --name djfulla
 
 Levantar contenedor con volumen de ansible y el proyecto
 ```sh
-docker run -v $(pwd)/ansible:/tmp/ansible -v $(pwd):/webapps/django -p 23:22 -p 8000:80 -p 5050:5555 -p 8001:8080 --rm -it --name djfullapp djfullapp
+docker run -v $(pwd)/ansible:/tmp/ansible -v $(pwd):/webapps/wagtailblog -p 23:22 -p 8000:80 -p 5050:5555 -p 8001:8080 --rm -it --name djfullapp djfullapp
 ```
 
 Levantar contenedor con volumen de ansible
@@ -136,4 +136,26 @@ REDIS_HOST	redis.neby3x.0001.use1.cache.amazonaws.com:6379
 
 
 aun no se si esto es util para zappa.
+AWS
+https://www.codingforentrepreneurs.com/blog/aws-iam-user-role-policies-zappa-serverless-python
+
+
+https://www.codingforentrepreneurs.com/blog/serverless-django-with-zappa-on-aws-lambda
+
+primero se despliega y luego se agregan los grupos de seguridad y se actualiza
+zappa deploy production
+
+"vpc_config" : {
+      "SubnetIds": ["subnet-d742dcd9"],
+      "SecurityGroupIds": [ "sg-0c277a37", "sg-09b054a57f1046265", "sg-0a72fc102701838e8", "sg-08459b51386be4d6b" ]
+},
+
+zappa update production
+zappa manage production "collectstatic --no-input"
+zappa manage production "migrate --no-input"
+zappa tail production
+zappa status production
+
 zappa undeploy production --remove-logs
+
+https://61z6izm5mj.execute-api.us-east-1.amazonaws.com/production

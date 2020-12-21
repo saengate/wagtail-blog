@@ -85,9 +85,8 @@ CORS_ORIGIN_ALLOW_ALL = True
 YOUR_S3_BUCKET = "staticfiles-saengate-blog"
 
 AWS_S3_BUCKET_NAME_STATIC = YOUR_S3_BUCKET
-
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'django_s3_storage.storage.StaticS3Storage'
+DEFAULT_FILE_STORAGE = 'django_s3_storage.storage.StaticS3Storage'
 AWS_STORAGE_BUCKET_NAME = YOUR_S3_BUCKET
 
 # These next two lines will serve the static files directly
