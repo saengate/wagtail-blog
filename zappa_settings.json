@@ -23,13 +23,13 @@
             "SecurityGroupIds": [ "sg-0c277a37", "sg-09b054a57f1046265", "sg-0a72fc102701838e8", "sg-08459b51386be4d6b" ]
         },
         "aws_environment_variables": {
-            "ENV": "production",
-            "DATABASE_NAME": "wagtaildb_prod",
-            "DATABASE_USER": "saengate_db",
-            "DATABASE_PASSWORD": "PG5432.4dm1n-U$ER:P4ss",
-            "DATABASE_HOST": "saengate-blog.czdeyx0up9tn.us-east-1.rds.amazonaws.com",
-            "DATABASE_PORT": "5432",
-            "REDIS_HOST": "redis://redis.neby3x.0001.use1.cache.amazonaws.com:6379"
+            "ENV": "",
+            "DATABASE_NAME": "",
+            "DATABASE_USER": "",
+            "DATABASE_PASSWORD": "",
+            "DATABASE_HOST": "",
+            "DATABASE_PORT": "",
+            "REDIS_HOST": ""
         },
         "exclude": [
             "*.zip",
