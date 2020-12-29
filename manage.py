@@ -10,7 +10,7 @@ def main():
         'local': 'local',
         'production': 'production',
     }
-    environment = os.getenv('ENV', 'local')
+    environment = os.environ.get('ENV', 'local')
 
     settings = os.environ.setdefault(
         'DJANGO_SETTINGS_MODULE', 'config.settings.' + environment)
