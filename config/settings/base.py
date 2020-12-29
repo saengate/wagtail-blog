@@ -8,7 +8,7 @@ from config.core_settings import *  # NOQA
 # SECURITY WARNING: keep the secret key used in production secret!
 # Refer to secret from project Secrets usually PROJECTNAME_SECRET
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 INSTALLED_APPS = INSTALLED_APPS + [  # NOQA
     'wagtail.contrib.forms',
@@ -82,3 +82,33 @@ WAGTAILIMAGES_FORMAT_CONVERSIONS = {
 
 # Reverse the default case-sensitive handling of tags
 TAGGIT_CASE_INSENSITIVE = True
+
+WAGTAILAPI_USE_FRONTENDCACHE = True
+REDIS_HOST = os.getenv('REDIS_HOST', 'redis://redis:6379')
+# WAGTAIL_CACHE_BACKEND = 'pagecache'
+CACHES = {
+    'default': {
+        'BACKEND': 'wagtailcache.compat_backends.django_redis.RedisCache',
+        'LOCATION': REDIS_HOST,
+        'KEY_PREFIX': 'wagtailcache',
+        'TIMEOUT': 3600,  # one hour (in seconds)
+    },
+}
+# INIT CONFIG WAGTAIL-COMPOSE
+WAGTAILFRONTENDCACHE = {
+    'redis': {
+        'BACKEND': 'wagtailcache.compat_backends.django_redis.RedisCache',
+        'LOCATION': REDIS_HOST,
+    },
+}
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_SUBJECT_PREFIX = '[Blog SaenGate] '
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = False
+EMAIL_PORT = 587
+
+EMAIL_HOST_USER = SERVER_EMAIL = DEFAULT_FROM_EMAIL = 'saengatehost@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')

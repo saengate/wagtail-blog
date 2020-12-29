@@ -29,51 +29,12 @@ DATABASES = {
     },
 }
 
-# ==============================================================================
-# WEBSOCKETS & CHANNELS
-# ==============================================================================
-
-REDIS_HOST = getenv('REDIS_HOST', 'redis://redis:6379')
-
-# It is possible to have multiple channel layers configured.
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-            "hosts": [REDIS_HOST],
-        },
-    },
-}
-
-
-WAGTAILAPI_USE_FRONTENDCACHE = False
 WAGTAILAPI_BASE_URL = 'www.saengate.com'
-
-# WAGTAIL_CACHE_BACKEND = 'pagecache'
-CACHES = {
-    'default': {
-        'BACKEND': 'wagtailcache.compat_backends.django_redis.RedisCache',
-        'LOCATION': REDIS_HOST,
-        'KEY_PREFIX': 'wagtailcache',
-        'TIMEOUT': 3600,  # one hour (in seconds)
-    },
-}
-
-# INIT CONFIG WAGTAIL-COMPOSE
-WAGTAILFRONTENDCACHE = {
-    'redis': {
-        'BACKEND': 'wagtailcache.compat_backends.django_redis.RedisCache',
-        'LOCATION': REDIS_HOST,
-    },
-}
 
 ADMINS = [
     ('Saúl Galán', 'saengate@gmail.com'),
 ]
 MANAGERS = ADMINS
-
-EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-EMAIL_SUBJECT_PREFIX = '[Blog SaenGate] '
 
 INTERNAL_IPS = ('127.0.0.1',)
 

@@ -1,7 +1,6 @@
 import pygments
 
 from config.settings.base import *  # NOQA
-from os import getenv
 from utils.color_logging import formatter
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -31,45 +30,18 @@ DATABASES = {
     },
 }
 
-REDIS_HOST = getenv('REDIS_HOST', 'redis://redis:6379')
-
-WAGTAILAPI_USE_FRONTENDCACHE = True
 WAGTAILAPI_BASE_URL = 'http://0.0.0.0:7000'
-
-# WAGTAIL_CACHE_BACKEND = 'pagecache'
-CACHES = {
-    'default': {
-        'BACKEND': 'wagtailcache.compat_backends.django_redis.RedisCache',
-        'LOCATION': REDIS_HOST,
-        'KEY_PREFIX': 'wagtailcache',
-        'TIMEOUT': 3600,  # one hour (in seconds)
-    },
-}
-
-# INIT CONFIG WAGTAIL-COMPOSE
-WAGTAILFRONTENDCACHE = {
-    'redis': {
-        'BACKEND': 'wagtailcache.compat_backends.django_redis.RedisCache',
-        'LOCATION': REDIS_HOST,
-    },
-}
 
 ADMINS = [
     ('Saúl Galán', 'saengate@gmail.com'),
 ]
 MANAGERS = ADMINS
 
-EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
-EMAIL_SUBJECT_PREFIX = '[Blog SaenGate] '
-
-INTERNAL_IPS = ('127.0.0.1', '10.0.2.2')
-
-# CORS_ORIGIN_WHITELIST = [
-#     "http://localhost:7000",
-#     "http://127.0.0.1:7000"
-# ]
-
+INTERNAL_IPS = ('127.0.0.1', '10.0.2.2', '0.0.0.0', 'localhost')
 # END CONFIG WAGTAIL-COMPOSE
+
+# CORS config https://pypi.org/project/django-cors-headers/
+CORS_ORIGIN_ALLOW_ALL = True
 
 # https://django-extensions.readthedocs.io/en/latest/shell_plus.html
 # ./manage.py shell_plus --notebook
@@ -151,9 +123,3 @@ LOGGING = {
         },
     },
 }
-
-# CORS config https://pypi.org/project/django-cors-headers/
-CORS_ORIGIN_ALLOW_ALL = True
-
-# To allow default credentials
-CORS_ALLOW_CREDENTIALS = True
