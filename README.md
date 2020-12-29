@@ -159,3 +159,8 @@ zappa status production
 zappa undeploy production --remove-logs
 
 https://61z6izm5mj.execute-api.us-east-1.amazonaws.com/production
+
+
+
+
+https://stackoverflow.com/questions/19331497/set-environment-variables-from-file-of-key-value-pairs/19331521

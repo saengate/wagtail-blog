@@ -1,0 +1,60 @@
+{
+    "local": {
+        "django_settings": "config.settings.local",
+        "environment_variables": {
+            "ADMIN_USERNAME": "admin",
+            "ADMIN_PASSWORD": "admin"
+        }
+    },
+    "production": {
+        "aws_region": "us-east-1",
+        "django_settings": "config.settings.production",
+        "profile_name": "default",
+        "project_name": "saengateblog",
+        "runtime": "python3.7",
+        "slim_handler": true,
+        "s3_bucket": "zappa-upload-saengate-blog",
+        "timeout_seconds": 900,
+        "manage_roles": false,
+        "role_name": "ZappaDjangoRole",
+        "role_arn": "arn:aws:iam::808038115231:role/ZappaDjangoRole",
+        "vpc_config" : {
+            "SubnetIds": ["subnet-d742dcd9"],
+            "SecurityGroupIds": [ "sg-0a72fc102701838e8" ]
+        },
+        "aws_environment_variables": {
+            "ENV": "production",
+            "DATABASE_NAME": "{{ prod_database_name }}",
+            "DATABASE_USER": "{{ prod_postgresql_user }}",
+            "DATABASE_PASSWORD": "{{ prod_postgresql_password }}",
+            "DATABASE_HOST": "{{ prod_database_host }}",
+            "DATABASE_PORT": "{{ prod_database_port }}",
+            "REDIS_HOST": "{{ prod_redis_host }}",
+            "SECRET_KEY": "{{ prod_secret_key }}",
+            "EMAIL_PASSWORD": "{{ prod_email_pass }}"
+        },
+        "exclude": [
+            "*.zip",
+            "*.devcontainer",
+            ".vscode",
+            "*.pyc",
+            "*.ipynb*",
+            "ansible",
+            "config/debug",
+            "__pycache__",
+            "static/",
+            "staticfiles/",
+            "media/",
+            "deployed/",
+            "tests/",
+            ".dockerignore",
+            ".gitignore",
+            ".travis.yml",
+            "cmdp",
+            "Dockerfile",
+            "poetry.lock",
+            "pyproject.toml",
+            "zshrc"
+        ]
+    }
+}

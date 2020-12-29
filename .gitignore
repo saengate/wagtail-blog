@@ -118,3 +118,5 @@ media/*
 !*/.gitkeep
 *.ipynb
 *saengateblog-production*
+zappa_settings.json
+ansible/.key

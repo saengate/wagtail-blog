@@ -15,6 +15,7 @@ TIMEOUT=1800
 GRACEFUL_TIMEOUT=40
 WORKER_CONNECTIONS=1000
 LOG_LEVEL=debug
+set -a; source {{ home }}/{{ project_name }}/.env; set +a
 
 echo "Starting $NAME as `whoami`"
 
