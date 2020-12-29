@@ -28,3 +28,6 @@ prod_email_pass: "{{ vault_email_pass }}"
 
 prod_redis_host: "{{vault_redis_host}}"
 prod_secret_key: "{{vault_secret_key}}"
+
+subnet_ids: "{{vault_subnet_ids}"
+security_group_ids: "{{vault_security_group_ids}}"

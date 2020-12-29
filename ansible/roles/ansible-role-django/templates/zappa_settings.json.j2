@@ -19,8 +19,8 @@
         "role_name": "ZappaDjangoRole",
         "role_arn": "arn:aws:iam::808038115231:role/ZappaDjangoRole",
         "vpc_config" : {
-            "SubnetIds": ["subnet-d742dcd9"],
-            "SecurityGroupIds": [ "sg-0a72fc102701838e8" ]
+            "SubnetIds": ["{{ subnet_ids }}"],
+            "SecurityGroupIds": [ "{{ security_group_ids }}" ]
         },
         "aws_environment_variables": {
             "ENV": "production",
