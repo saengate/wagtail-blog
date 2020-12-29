@@ -26,14 +26,6 @@
         system: yes
         shell: /bin/bash
 
-    - name: populate /etc/environment
-      lineinfile:
-        path: "/etc/environment"
-        state: present
-        regexp: "^{{ item.key }}="
-        line: "{{ item.key }}={{ item.value}}"
-      with_items: "{{ os_environment }}"
-
     - name: Valida carpetas de necesarias para el projecto
       stat:
         path: "{{ item }}"
