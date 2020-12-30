@@ -16,6 +16,8 @@ WS_ALLOWED_HOSTS = ['*'] if DEBUG else HOSTS[ENVIRONMENT]
 
 ALLOWED_HOSTS = ['*']
 
+HEADLESS_PREVIEW_LIVE = True
+
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -31,6 +33,10 @@ DATABASES = {
 }
 
 WAGTAILAPI_BASE_URL = 'http://0.0.0.0:7000'
+
+HEADLESS_PREVIEW_CLIENT_URLS = {
+    'default': '0.0.0.0',
+}
 
 ADMINS = [
     ('Saúl Galán', 'saengate@gmail.com'),

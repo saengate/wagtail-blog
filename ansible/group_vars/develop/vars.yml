@@ -25,9 +25,10 @@ prod_postgresql_password: "{{ vault_postgresql_password }}"
 prod_database_host: "{{ vault_postgresql_host }}"
 prod_database_port: "{{ vault_postgresql_port }}"
 prod_email_pass: "{{ vault_email_pass }}"
+prod_email_user: "{{ vault_email_user }}"
 
 prod_redis_host: "{{vault_redis_host}}"
 prod_secret_key: "{{vault_secret_key}}"
 
-subnet_ids: "{{vault_subnet_ids}"
+subnet_ids: "{{vault_subnet_ids}}"
 security_group_ids: "{{vault_security_group_ids}}"

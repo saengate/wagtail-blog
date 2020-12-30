@@ -53,6 +53,7 @@ termcolor = "^1.1"
 urllib3 = "^1.24.1"
 wagtail = "^2.10"
 wagtail-cache = "^1.0"
+wagtail-headless-preview = "^0.1.4"
 zappa = "^0.52.0"
 zappa-django-utils = "^0.4"
 

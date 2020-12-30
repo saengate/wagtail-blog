@@ -1978,6 +1978,20 @@ python-versions = "*"
 wagtail = ">=2.0"
 
 [[package]]
+name = "wagtail-headless-preview"
+version = "0.1.4"
+description = "Wagtail previews in headless mode."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+wagtail = ">=2.0"
+
+[package.extras]
+testing = ["tox", "django-cors-headers"]
+
+[[package]]
 name = "wcwidth"
 version = "0.2.5"
 description = "Measures the displayed width of unicode strings in a terminal"
@@ -2141,7 +2155,7 @@ testing = ["coverage (>=5.0.3)", "zope.event", "zope.testing"]
 [metadata]
 lock-version = "1.1"
 python-versions = "~3.7"
-content-hash = "d2cc9b5fcdfa72ae6f064b5192924f2cd2563a1778c2010a0f7262e4a4d5427e"
+content-hash = "25cfea8ab4efd08d7417eaff4df78aaebfb5935df08a383e5826ab43624362ba"
 
 [metadata.files]
 aioredis = [
@@ -3201,6 +3215,10 @@ wagtail = [
 wagtail-cache = [
     {file = "wagtail-cache-1.0.1.tar.gz", hash = "sha256:9fdbefe091130cb2e72f220a0d6f8e74e668775bf5b2c80202c2d861191d1df0"},
     {file = "wagtail_cache-1.0.1-py3-none-any.whl", hash = "sha256:beaf34a1aeb2027c5f1f64c06987b537826643d4a707359f45218b708ab4f924"},
+]
+wagtail-headless-preview = [
+    {file = "wagtail-headless-preview-0.1.4.tar.gz", hash = "sha256:d1fd0acb4c90468bcfad0a99df11b55defd7fdcdb204ecd4b11052e5f1e10295"},
+    {file = "wagtail_headless_preview-0.1.4-py2.py3-none-any.whl", hash = "sha256:782060d1150a33e6c3e5dc7f38498281c0526f3fbd3ae81ab3e1df5c230c4b80"},
 ]
 wcwidth = [
     {file = "wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784"},

@@ -24,6 +24,7 @@ INSTALLED_APPS = INSTALLED_APPS + [  # NOQA
     'wagtail.admin',
     'wagtail.core',
     'wagtail.api.v2',
+    'wagtail_headless_preview',  # https://github.com/torchbox/wagtail-headless-preview
 
     # https://docs.coderedcorp.com/wagtail-cache/stable/getting_started/install.html
     'wagtailcache',
@@ -107,7 +108,6 @@ EMAIL_SUBJECT_PREFIX = '[Blog SaenGate] '
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
-# EMAIL_USE_SSL = False
 EMAIL_PORT = 587
 
 EMAIL_HOST_USER = SERVER_EMAIL = DEFAULT_FROM_EMAIL = os.getenv('EMAIL_USER')

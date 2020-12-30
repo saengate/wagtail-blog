@@ -149,6 +149,11 @@ zappa deploy production
       "SubnetIds": ["subnet-d742dcd9"],
       "SecurityGroupIds": [ "sg-0c277a37", "sg-09b054a57f1046265", "sg-0a72fc102701838e8", "sg-08459b51386be4d6b" ]
 },
+Hay problemas con el permiso en el rol que no permite agregarlo en el zappa hasta agregarlo directamente en las configuraciones de la función lambda. Puede que haga falta revisar los permisos que hacen falta agregar a alguno de los roles para resolver esto en el deploy o el update si esta la configuración voc_config: 
+
+"""
+botocore.exceptions.ClientError: An error occurred (AccessDeniedException) when calling the UpdateFunctionConfiguration operation: Your access has been denied by EC2, please make sure your request credentials have permission to DescribeSecurityGroups for sg-0c277a37,sg-09b054a57f1046265,sg-0a72fc102701838e8,sg-08459b51386be4d6b. EC2 Error Code: UnauthorizedOperation. EC2 Error Message: You are not authorized to perform this operation.
+"""
 
 zappa update production
 zappa manage production "collectstatic --no-input"
@@ -164,3 +169,19 @@ https://61z6izm5mj.execute-api.us-east-1.amazonaws.com/production
 
 
 https://stackoverflow.com/questions/19331497/set-environment-variables-from-file-of-key-value-pairs/19331521
+
+
+
+echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_user('saengate', 'saengate@gmail.com', 'saengate')" | ./manage.py shell
+zappa invoke --raw production "from django.contrib.auth.models import User; User.objects.create_superuser('saengate', 'saengate@gmail.com', 'A9dwKyHUfQyoh7KymWcbWiC47reUYLVWF6mZQzdMhvwQUFBRQdxEBHwVosR3FG4UVCwJb6R7QQdkGtUCwzxUTf63vpHWEV4FL23j')";
+zappa invoke --raw production "from django.contrib.auth.models import User; User.objects.create_superuser('contact', 'contact@saengate.com', 'contact')"
+
+"user": [
+"saengate"
+]
+
+"owner": [
+"saengate"
+],
+
+zappa manage production "loaddata ./fixtures/data.json"

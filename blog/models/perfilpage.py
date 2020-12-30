@@ -7,9 +7,10 @@ from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.api import APIField
 from wagtail.images.models import Image  # NOQA
 from wagtail.images.edit_handlers import ImageChooserPanel
+from wagtail_headless_preview.models import HeadlessPreviewMixin
 
 
-class PerfilPage(Page):
+class PerfilPage(HeadlessPreviewMixin, Page):
     description = RichTextField(blank=True)
     photo = models.ForeignKey(
         'wagtailimages.Image',

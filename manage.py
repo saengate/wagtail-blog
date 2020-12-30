@@ -17,7 +17,6 @@ def main():
     env = environments[environment]
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings)
 
-    print(env)
     with open('zappa_settings.json') as environment:
         data = json.load(environment)
         env_vars = data[env]['environment_variables']

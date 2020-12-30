@@ -1,0 +1,1466 @@
+[
+{
+  "model": "wagtailusers.userprofile",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "saengate"
+    ],
+    "submitted_notifications": true,
+    "approved_notifications": true,
+    "rejected_notifications": true,
+    "preferred_language": "",
+    "current_time_zone": "",
+    "avatar": ""
+  }
+},
+{
+  "model": "wagtailcore.site",
+  "pk": 2,
+  "fields": {
+    "hostname": "localhost",
+    "port": 80,
+    "site_name": "",
+    "root_page": 3,
+    "is_default_site": true
+  }
+},
+{
+  "model": "wagtailcore.locale",
+  "pk": 1,
+  "fields": {
+    "language_code": "es"
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 1,
+  "fields": {
+    "path": "0001",
+    "depth": 1,
+    "numchild": 1,
+    "translation_key": "a9d139a0-6583-4fa0-a5a4-d46d39c5d59b",
+    "locale": 1,
+    "title": "Root",
+    "draft_title": "Root",
+    "slug": "root",
+    "content_type": [
+      "wagtailcore",
+      "page"
+    ],
+    "live": true,
+    "has_unpublished_changes": false,
+    "url_path": "/",
+    "owner": null,
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "first_published_at": null,
+    "last_published_at": null,
+    "latest_revision_created_at": null,
+    "live_revision": null,
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 3,
+  "fields": {
+    "path": "00010001",
+    "depth": 2,
+    "numchild": 3,
+    "translation_key": "5aef60fe-b50f-4844-b972-38d76e975414",
+    "locale": 1,
+    "title": "Home",
+    "draft_title": "Home",
+    "slug": "home",
+    "content_type": [
+      "home",
+      "homepage"
+    ],
+    "live": true,
+    "has_unpublished_changes": true,
+    "url_path": "/home/",
+    "owner": null,
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "first_published_at": null,
+    "last_published_at": null,
+    "latest_revision_created_at": "2020-12-20T16:57:26.694Z",
+    "live_revision": null,
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 4,
+  "fields": {
+    "path": "000100010001",
+    "depth": 3,
+    "numchild": 0,
+    "translation_key": "0d2b34c6-bfc2-49f3-a891-a25ae7521cce",
+    "locale": 1,
+    "title": "SaenGate",
+    "draft_title": "SaenGate",
+    "slug": "saengate",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "live": true,
+    "has_unpublished_changes": false,
+    "url_path": "/home/saengate/",
+    "owner": [
+      "saengate"
+    ],
+    "seo_title": "SaenGate",
+    "show_in_menus": false,
+    "search_description": "",
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "first_published_at": "2020-12-20T17:01:30.190Z",
+    "last_published_at": "2020-12-30T14:55:35.255Z",
+    "latest_revision_created_at": "2020-12-30T14:55:35.131Z",
+    "live_revision": 21,
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 5,
+  "fields": {
+    "path": "000100010002",
+    "depth": 3,
+    "numchild": 0,
+    "translation_key": "73a229da-6c82-493d-9ae5-00e6e846ba2e",
+    "locale": 1,
+    "title": "Contacto",
+    "draft_title": "Contacto",
+    "slug": "contacto",
+    "content_type": [
+      "blog",
+      "contactpage"
+    ],
+    "live": true,
+    "has_unpublished_changes": false,
+    "url_path": "/home/contacto/",
+    "owner": [
+      "saengate"
+    ],
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "first_published_at": "2020-12-20T18:21:09.016Z",
+    "last_published_at": "2020-12-20T18:41:13.036Z",
+    "latest_revision_created_at": "2020-12-20T18:41:12.878Z",
+    "live_revision": 10,
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 6,
+  "fields": {
+    "path": "000100010003",
+    "depth": 3,
+    "numchild": 0,
+    "translation_key": "faef45c8-6bbe-4f25-91c8-98cf5eea78a6",
+    "locale": 1,
+    "title": "Blog",
+    "draft_title": "Blog",
+    "slug": "una-pequeña-prueba",
+    "content_type": [
+      "blog",
+      "blogspage"
+    ],
+    "live": true,
+    "has_unpublished_changes": false,
+    "url_path": "/home/una-pequeña-prueba/",
+    "owner": [
+      "saengate"
+    ],
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "first_published_at": "2020-12-20T19:53:40.933Z",
+    "last_published_at": "2020-12-30T15:04:10.567Z",
+    "latest_revision_created_at": "2020-12-30T15:04:10.438Z",
+    "live_revision": 23,
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 1,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T16:44:46.240Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": false, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"description\": \"<p>Quisiera cambiar el mundo...</p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 2,
+  "fields": {
+    "page": 3,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T16:46:52.282Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 3, \"path\": \"00010001\", \"depth\": 2, \"numchild\": 1, \"translation_key\": \"5aef60fe-b50f-4844-b972-38d76e975414\", \"locale\": 1, \"title\": \"Blog\", \"draft_title\": \"Home\", \"slug\": \"home\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/\", \"owner\": null, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 3,
+  "fields": {
+    "page": 3,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T16:57:26.694Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 3, \"path\": \"00010001\", \"depth\": 2, \"numchild\": 1, \"translation_key\": \"5aef60fe-b50f-4844-b972-38d76e975414\", \"locale\": 1, \"title\": \"Home\", \"draft_title\": \"Blog\", \"slug\": \"home\", \"content_type\": 10, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/\", \"owner\": null, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": \"2020-12-20T16:46:52.282Z\", \"live_revision\": null, \"alias_of\": null}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 4,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T16:58:47.358Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": false, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": \"2020-12-20T16:44:46.240Z\", \"live_revision\": null, \"alias_of\": null, \"description\": \"<p>Quisiera cambiar el mundo...</p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 5,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T17:01:30.095Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": false, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": \"2020-12-20T16:58:47.358Z\", \"live_revision\": null, \"alias_of\": null, \"description\": \"<p>Quisiera cambiar el mundo...</p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 6,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T17:02:11.346Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-20T17:01:30.190Z\", \"latest_revision_created_at\": \"2020-12-20T17:01:30.095Z\", \"live_revision\": 5, \"alias_of\": null, \"description\": \"<p>Quisiera cambiar el mundo...</p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 7,
+  "fields": {
+    "page": 5,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T18:15:51.148Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 5, \"path\": \"000100010002\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"73a229da-6c82-493d-9ae5-00e6e846ba2e\", \"locale\": 1, \"title\": \"Contacto\", \"draft_title\": \"Contacto\", \"slug\": \"contacto\", \"content_type\": 45, \"live\": false, \"has_unpublished_changes\": false, \"url_path\": \"/home/contacto/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"to_address\": \"\", \"from_address\": \"saengatehost@gmail.com\", \"subject\": \"Contacto desde www.saengate.com\", \"intro\": \"<p>Un espacio para dejarme un mensaje</p>\", \"thank_you\": \"<p>Gracias por contactarme...</p>\", \"form_fields\": [{\"pk\": 1, \"sort_order\": 0, \"clean_name\": \"nombre\", \"label\": \"Nombre\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su nombre\", \"page\": 5}, {\"pk\": 2, \"sort_order\": 1, \"clean_name\": \"apellido\", \"label\": \"Apellido\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su apellido\", \"page\": 5}, {\"pk\": 3, \"sort_order\": 2, \"clean_name\": \"asunto\", \"label\": \"Asunto\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique el motivo por el que desea comunicarse\", \"page\": 5}, {\"pk\": 4, \"sort_order\": 3, \"clean_name\": \"correo_electronico\", \"label\": \"Correo electr\\u00f3nico\", \"field_type\": \"email\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su correo para recibir la respuesta, si es que la desea.\", \"page\": 5}, {\"pk\": 5, \"sort_order\": 4, \"clean_name\": \"mensaje\", \"label\": \"Mensaje\", \"field_type\": \"multiline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Un espacio un poco m\\u00e1s amplio para que dejes tu mensaje a mi persona.\", \"page\": 5}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 8,
+  "fields": {
+    "page": 5,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T18:21:08.899Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 5, \"path\": \"000100010002\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"73a229da-6c82-493d-9ae5-00e6e846ba2e\", \"locale\": 1, \"title\": \"Contacto\", \"draft_title\": \"Contacto\", \"slug\": \"contacto\", \"content_type\": 45, \"live\": false, \"has_unpublished_changes\": true, \"url_path\": \"/home/contacto/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": \"2020-12-20T18:15:51.148Z\", \"live_revision\": null, \"alias_of\": null, \"to_address\": \"\", \"from_address\": \"saengatehost@gmail.com\", \"subject\": \"Contacto desde www.saengate.com\", \"intro\": \"<p>Un espacio para dejarme un mensaje</p>\", \"thank_you\": \"<p>Gracias por contactarme...</p>\", \"form_fields\": [{\"pk\": 1, \"sort_order\": 0, \"clean_name\": \"nombre\", \"label\": \"Nombre\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su nombre\", \"page\": null}, {\"pk\": 2, \"sort_order\": 1, \"clean_name\": \"apellido\", \"label\": \"Apellido\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su apellido\", \"page\": null}, {\"pk\": 3, \"sort_order\": 2, \"clean_name\": \"asunto\", \"label\": \"Asunto\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique el motivo por el que desea comunicarse\", \"page\": null}, {\"pk\": 4, \"sort_order\": 3, \"clean_name\": \"correo_electronico\", \"label\": \"Correo electr\\u00f3nico\", \"field_type\": \"email\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su correo para recibir la respuesta, si es que la desea.\", \"page\": null}, {\"pk\": 5, \"sort_order\": 4, \"clean_name\": \"mensaje\", \"label\": \"Mensaje\", \"field_type\": \"multiline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Un espacio un poco m\\u00e1s amplio para que dejes tu mensaje a mi persona.\", \"page\": null}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 9,
+  "fields": {
+    "page": 5,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T18:41:08.388Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 5, \"path\": \"000100010002\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"73a229da-6c82-493d-9ae5-00e6e846ba2e\", \"locale\": 1, \"title\": \"Contacto\", \"draft_title\": \"Contacto\", \"slug\": \"contacto\", \"content_type\": 45, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/contacto/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T18:21:09.016Z\", \"last_published_at\": \"2020-12-20T18:21:09.016Z\", \"latest_revision_created_at\": \"2020-12-20T18:21:08.899Z\", \"live_revision\": 8, \"alias_of\": null, \"to_address\": \"saengatehost@gmail.com\", \"from_address\": \"saengatehost@gmail.com\", \"subject\": \"Contacto desde www.saengate.com\", \"intro\": \"<p>Un espacio para dejarme un mensaje</p>\", \"thank_you\": \"<p>Gracias por contactarme...</p>\", \"form_fields\": [{\"pk\": 1, \"sort_order\": 0, \"clean_name\": \"nombre\", \"label\": \"Nombre\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su nombre\", \"page\": 5}, {\"pk\": 2, \"sort_order\": 1, \"clean_name\": \"apellido\", \"label\": \"Apellido\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su apellido\", \"page\": 5}, {\"pk\": 3, \"sort_order\": 2, \"clean_name\": \"asunto\", \"label\": \"Asunto\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique el motivo por el que desea comunicarse\", \"page\": 5}, {\"pk\": 4, \"sort_order\": 3, \"clean_name\": \"correo_electronico\", \"label\": \"Correo electr\\u00f3nico\", \"field_type\": \"email\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su correo para recibir la respuesta, si es que la desea.\", \"page\": 5}, {\"pk\": 5, \"sort_order\": 4, \"clean_name\": \"mensaje\", \"label\": \"Mensaje\", \"field_type\": \"multiline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Un espacio un poco m\\u00e1s amplio para que dejes tu mensaje a mi persona.\", \"page\": 5}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 10,
+  "fields": {
+    "page": 5,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T18:41:12.878Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 5, \"path\": \"000100010002\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"73a229da-6c82-493d-9ae5-00e6e846ba2e\", \"locale\": 1, \"title\": \"Contacto\", \"draft_title\": \"Contacto\", \"slug\": \"contacto\", \"content_type\": 45, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/contacto/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T18:21:09.016Z\", \"last_published_at\": \"2020-12-20T18:21:09.016Z\", \"latest_revision_created_at\": \"2020-12-20T18:41:08.388Z\", \"live_revision\": 8, \"alias_of\": null, \"to_address\": \"saengatehost@gmail.com\", \"from_address\": \"saengatehost@gmail.com\", \"subject\": \"Contacto desde www.saengate.com\", \"intro\": \"<p>Un espacio para dejarme un mensaje</p>\", \"thank_you\": \"<p>Gracias por contactarme...</p>\", \"form_fields\": [{\"pk\": 1, \"sort_order\": 0, \"clean_name\": \"nombre\", \"label\": \"Nombre\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su nombre\", \"page\": null}, {\"pk\": 2, \"sort_order\": 1, \"clean_name\": \"apellido\", \"label\": \"Apellido\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su apellido\", \"page\": null}, {\"pk\": 3, \"sort_order\": 2, \"clean_name\": \"asunto\", \"label\": \"Asunto\", \"field_type\": \"singleline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique el motivo por el que desea comunicarse\", \"page\": null}, {\"pk\": 4, \"sort_order\": 3, \"clean_name\": \"correo_electronico\", \"label\": \"Correo electr\\u00f3nico\", \"field_type\": \"email\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Indique su correo para recibir la respuesta, si es que la desea.\", \"page\": null}, {\"pk\": 5, \"sort_order\": 4, \"clean_name\": \"mensaje\", \"label\": \"Mensaje\", \"field_type\": \"multiline\", \"required\": true, \"choices\": \"\", \"default_value\": \"\", \"help_text\": \"Un espacio un poco m\\u00e1s amplio para que dejes tu mensaje a mi persona.\", \"page\": null}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 11,
+  "fields": {
+    "page": 6,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T19:53:38.089Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 6, \"path\": \"000100010003\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"faef45c8-6bbe-4f25-91c8-98cf5eea78a6\", \"locale\": 1, \"title\": \"Una peque\\u00f1a prueba\", \"draft_title\": \"Una peque\\u00f1a prueba\", \"slug\": \"una-peque\\u00f1a-prueba\", \"content_type\": 43, \"live\": false, \"has_unpublished_changes\": false, \"url_path\": \"/home/una-peque\\u00f1a-prueba/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"intro\": \"Aqu\\u00ed empieza todo\", \"body\": \"<p>Puro bla bla.. y nada de nada</p>\", \"created_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 12,
+  "fields": {
+    "page": 6,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T19:53:40.811Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 6, \"path\": \"000100010003\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"faef45c8-6bbe-4f25-91c8-98cf5eea78a6\", \"locale\": 1, \"title\": \"Una peque\\u00f1a prueba\", \"draft_title\": \"Una peque\\u00f1a prueba\", \"slug\": \"una-peque\\u00f1a-prueba\", \"content_type\": 43, \"live\": false, \"has_unpublished_changes\": true, \"url_path\": \"/home/una-peque\\u00f1a-prueba/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": \"2020-12-20T19:53:38.089Z\", \"live_revision\": null, \"alias_of\": null, \"intro\": \"Aqu\\u00ed empieza todo\", \"body\": \"<p>Puro bla bla.. y nada de nada</p>\", \"created_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 13,
+  "fields": {
+    "page": 6,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T19:53:44.992Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 6, \"path\": \"000100010003\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"faef45c8-6bbe-4f25-91c8-98cf5eea78a6\", \"locale\": 1, \"title\": \"Una peque\\u00f1a prueba\", \"draft_title\": \"Una peque\\u00f1a prueba\", \"slug\": \"una-peque\\u00f1a-prueba\", \"content_type\": 43, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/una-peque\\u00f1a-prueba/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T19:53:40.933Z\", \"last_published_at\": \"2020-12-20T19:53:40.933Z\", \"latest_revision_created_at\": \"2020-12-20T19:53:40.811Z\", \"live_revision\": 12, \"alias_of\": null, \"intro\": \"Aqu\\u00ed empieza todo\", \"body\": \"<p>Puro bla bla.. y nada de nada</p>\", \"created_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 14,
+  "fields": {
+    "page": 6,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-20T19:54:10.331Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 6, \"path\": \"000100010003\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"faef45c8-6bbe-4f25-91c8-98cf5eea78a6\", \"locale\": 1, \"title\": \"Blog\", \"draft_title\": \"Una peque\\u00f1a prueba\", \"slug\": \"una-peque\\u00f1a-prueba\", \"content_type\": 43, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/una-peque\\u00f1a-prueba/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T19:53:40.933Z\", \"last_published_at\": \"2020-12-20T19:53:40.933Z\", \"latest_revision_created_at\": \"2020-12-20T19:53:44.992Z\", \"live_revision\": 12, \"alias_of\": null, \"intro\": \"Aqu\\u00ed empieza todo\", \"body\": \"<p>Puro bla bla.. y nada de nada</p>\", \"created_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 15,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-30T14:22:58.447Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-20T17:02:11.462Z\", \"latest_revision_created_at\": \"2020-12-20T17:02:11.346Z\", \"live_revision\": 6, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 16,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-30T14:23:14.443Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-20T17:02:11.462Z\", \"latest_revision_created_at\": \"2020-12-30T14:22:58.447Z\", \"live_revision\": 6, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 17,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-30T14:27:29.406Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:23:14.612Z\", \"latest_revision_created_at\": \"2020-12-30T14:23:14.443Z\", \"live_revision\": 16, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 18,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-30T14:50:14.884Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:23:14.612Z\", \"latest_revision_created_at\": \"2020-12-30T14:27:29.406Z\", \"live_revision\": 16, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 19,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-30T14:52:07.256Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:50:15.048Z\", \"latest_revision_created_at\": \"2020-12-30T14:50:14.884Z\", \"live_revision\": 18, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 20,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-30T14:55:17.027Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y interesado en la astronom\\u00eda y la f\\u00edsica con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 21,
+  "fields": {
+    "page": 4,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-30T14:55:35.131Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:55:17.027Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y interesado en la astronom\\u00eda y la f\\u00edsica con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 22,
+  "fields": {
+    "page": 6,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-30T15:04:07.131Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 6, \"path\": \"000100010003\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"faef45c8-6bbe-4f25-91c8-98cf5eea78a6\", \"locale\": 1, \"title\": \"Blog\", \"draft_title\": \"Blog\", \"slug\": \"una-peque\\u00f1a-prueba\", \"content_type\": 43, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/una-peque\\u00f1a-prueba/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T19:53:40.933Z\", \"last_published_at\": \"2020-12-20T19:53:40.933Z\", \"latest_revision_created_at\": \"2020-12-20T19:54:10.331Z\", \"live_revision\": 12, \"alias_of\": null, \"intro\": \"Aqu\\u00ed empieza todo, esta es la primera entrada. Una peque\\u00f1a prueba del modelo de para entradas del blog.\", \"body\": \"<p>Y aqu\\u00ed empieza todo. El pase a producci\\u00f3n de una p\\u00e1gina personal con un blog que ira evolucionando con el paso del tiempo. Ac\\u00e1 intentar\\u00e9 explicar cada paso para crear la p\\u00e1gina web desde el desarrollo hasta el pase a producci\\u00f3n con este proyecto.</p><p></p><p>Esta entrada podr\\u00e1 ser editada a futuro, es solo una prueba del pase local de contenido a producci\\u00f3n usando django y wagtail.</p><p></p><p>\\u00bfQu\\u00e9 mal salir puede?</p>\", \"created_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 23,
+  "fields": {
+    "page": 6,
+    "submitted_for_moderation": false,
+    "created_at": "2020-12-30T15:04:10.438Z",
+    "user": [
+      "saengate"
+    ],
+    "content_json": "{\"pk\": 6, \"path\": \"000100010003\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"faef45c8-6bbe-4f25-91c8-98cf5eea78a6\", \"locale\": 1, \"title\": \"Blog\", \"draft_title\": \"Blog\", \"slug\": \"una-peque\\u00f1a-prueba\", \"content_type\": 43, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/una-peque\\u00f1a-prueba/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T19:53:40.933Z\", \"last_published_at\": \"2020-12-20T19:53:40.933Z\", \"latest_revision_created_at\": \"2020-12-30T15:04:07.131Z\", \"live_revision\": 12, \"alias_of\": null, \"intro\": \"Aqu\\u00ed empieza todo, esta es la primera entrada. Una peque\\u00f1a prueba del modelo de para entradas del blog.\", \"body\": \"<p>Y aqu\\u00ed empieza todo. El pase a producci\\u00f3n de una p\\u00e1gina personal con un blog que ira evolucionando con el paso del tiempo. Ac\\u00e1 intentar\\u00e9 explicar cada paso para crear la p\\u00e1gina web desde el desarrollo hasta el pase a producci\\u00f3n con este proyecto.</p><p></p><p>Esta entrada podr\\u00e1 ser editada a futuro, es solo una prueba del pase local de contenido a producci\\u00f3n usando django y wagtail.</p><p></p><p>\\u00bfQu\\u00e9 mal salir puede?</p>\", \"created_at\": \"2020-12-20\"}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.collection",
+  "pk": 1,
+  "fields": {
+    "path": "0001",
+    "depth": 1,
+    "numchild": 0,
+    "name": "Root"
+  }
+},
+{
+  "model": "wagtailcore.workflowpage",
+  "pk": 1,
+  "fields": {
+    "workflow": 1
+  }
+},
+{
+  "model": "wagtailcore.workflowtask",
+  "pk": 1,
+  "fields": {
+    "sort_order": 0,
+    "workflow": 1,
+    "task": 1
+  }
+},
+{
+  "model": "wagtailcore.task",
+  "pk": 1,
+  "fields": {
+    "name": "Moderators approval",
+    "content_type": [
+      "wagtailcore",
+      "groupapprovaltask"
+    ],
+    "active": true
+  }
+},
+{
+  "model": "wagtailcore.workflow",
+  "pk": 1,
+  "fields": {
+    "name": "Moderators approval",
+    "active": true
+  }
+},
+{
+  "model": "wagtailcore.groupapprovaltask",
+  "pk": 1,
+  "fields": {
+    "groups": [
+      [
+        "Moderators"
+      ]
+    ]
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 1,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.create",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T16:44:46.171Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": null
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 2,
+  "fields": {
+    "content_type": [
+      "home",
+      "homepage"
+    ],
+    "label": "Blog",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T16:46:52.358Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 3,
+    "revision": 2
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 3,
+  "fields": {
+    "content_type": [
+      "home",
+      "homepage"
+    ],
+    "label": "Home",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T16:57:26.780Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 3,
+    "revision": 3
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 4,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T16:58:47.436Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 4
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 5,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T17:01:30.165Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 5
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 6,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T17:02:11.436Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 7,
+  "fields": {
+    "content_type": [
+      "blog",
+      "contactpage"
+    ],
+    "label": "Contacto",
+    "action": "wagtail.create",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T18:15:51.033Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 5,
+    "revision": null
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 8,
+  "fields": {
+    "content_type": [
+      "blog",
+      "contactpage"
+    ],
+    "label": "Contacto",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T18:21:08.985Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 5,
+    "revision": 8
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 9,
+  "fields": {
+    "content_type": [
+      "blog",
+      "contactpage"
+    ],
+    "label": "Contacto",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T18:41:08.496Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 5,
+    "revision": 9
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 10,
+  "fields": {
+    "content_type": [
+      "blog",
+      "contactpage"
+    ],
+    "label": "Contacto",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T18:41:12.999Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 5,
+    "revision": 10
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 11,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogspage"
+    ],
+    "label": "Una pequeña prueba",
+    "action": "wagtail.create",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T19:53:38.022Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 6,
+    "revision": null
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 12,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogspage"
+    ],
+    "label": "Una pequeña prueba",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T19:53:40.902Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 6,
+    "revision": 12
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 13,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogspage"
+    ],
+    "label": "Una pequeña prueba",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T19:53:45.111Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 6,
+    "revision": 13
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 14,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogspage"
+    ],
+    "label": "Blog",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-20T19:54:10.460Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 6,
+    "revision": 14
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 15,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-30T14:22:58.598Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 15
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 16,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-30T14:23:14.569Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 16
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 17,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-30T14:27:29.529Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 17
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 18,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-30T14:50:15.007Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 18
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 19,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-30T14:52:07.360Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 19
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 20,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-30T14:55:17.159Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 20
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 21,
+  "fields": {
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "label": "SaenGate",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-30T14:55:35.226Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 4,
+    "revision": 21
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 22,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogspage"
+    ],
+    "label": "Blog",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-30T15:04:07.278Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 6,
+    "revision": 22
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 23,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogspage"
+    ],
+    "label": "Blog",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2020-12-30T15:04:10.537Z",
+    "user": [
+      "saengate"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 6,
+    "revision": 23
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 1,
+  "fields": {
+    "token": "id=4:1kucnK:TvhkFR9-C2wP06U3CdSSxjZYQVPYvJotpdODqMw6bUU",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:23:14.612Z\", \"latest_revision_created_at\": \"2020-12-30T14:27:29.406Z\", \"live_revision\": 16, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 2,
+  "fields": {
+    "token": "id=4:1kucnM:W22CKJtd-SUUVBNHsQVmKlbkQlflaWCA1gn31YrHwsU",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:23:14.612Z\", \"latest_revision_created_at\": \"2020-12-30T14:27:29.406Z\", \"live_revision\": 16, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 3,
+  "fields": {
+    "token": "id=4:1kucnl:XrKrdKqfCdV95-JOlw136psEBTN8_P5HBR0OxzcU3kU",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:23:14.612Z\", \"latest_revision_created_at\": \"2020-12-30T14:27:29.406Z\", \"live_revision\": 16, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 4,
+  "fields": {
+    "token": "id=4:1kucnn:BKqSWFiE1veUmz0AzGABfOClfv-0unVUDEuDkgLG29k",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:23:14.612Z\", \"latest_revision_created_at\": \"2020-12-30T14:50:14.884Z\", \"live_revision\": 16, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 6,
+  "fields": {
+    "token": "id=4:1kucpj:IUuFzuYTQsEvYWHXYLlX-DpP4J5OtTz53jlzDgI69yg",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 7,
+  "fields": {
+    "token": "id=4:1kucpk:NltAMsEOVMbCEUvXdY3wyvcTQNZt_x7gIM81zUgveDs",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 8,
+  "fields": {
+    "token": "id=4:1kucqg:9y-HNjp-0UeDchnvKpN2PReoijdo2OZjzhc22u8zhzg",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 9,
+  "fields": {
+    "token": "id=4:1kucqi:u30Xskd5cILYyd3AS_cOTN30VFrhsUyLqaWCLvDha68",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 10,
+  "fields": {
+    "token": "id=4:1kucqj:LOzT5lRQKOCmLVkwyAIyUcir8h-0xt1mcp49E-aYMl8",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 11,
+  "fields": {
+    "token": "id=4:1kucqs:GELzgIzhIK8sIqSi6Bhee23ZyJAAqLGO7Mxb1wdGmRI",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 12,
+  "fields": {
+    "token": "id=4:1kucqu:AyGtNXp4bjbwauIr3fsu_ZzaCCT6Vl2TPx2SBkQd-Es",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 13,
+  "fields": {
+    "token": "id=4:1kucr2:XpLRhfCtqe1rZcACHcycSIiaSCIoQTKrDRsoGlGUuWg",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 14,
+  "fields": {
+    "token": "id=4:1kucr3:ItuGGiOxyz3ZaD7v6rznFxdGATUxMABthk1t8XiD4AA",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 15,
+  "fields": {
+    "token": "id=4:1kucr4:9M4M3v4A3pWEyqcQL9450_Ms_IpvrT48_W4IV3H_I4g",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define.<br/>Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 16,
+  "fields": {
+    "token": "id=4:1kucr5:_J5GQSAxJ4-cyaogwsMGQF-YMw-_fIS4Gz9z-boZwOs",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 17,
+  "fields": {
+    "token": "id=4:1kucrG:NUHhoVUEMaEo9v7xXB29Dg1cvUFJeu9dYUX17m_5Rio",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 18,
+  "fields": {
+    "token": "id=4:1kucsQ:BI_AdmkaJ6JGoNcszt_t1qxi1A2glByq3aRIHdpni0o",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y interesado en la astronim\\u00eda y la f\\u00edsica con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 19,
+  "fields": {
+    "token": "id=4:1kucsV:U4f1GjXDpCUKgosuixbL9RlHeWbVYQl6zcEZf1SOM28",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y interesado en la astronom\\u00eda y la f\\u00edsica con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 20,
+  "fields": {
+    "token": "id=4:1kucsa:d_Qm4GIcbcaRwA8V_uvAlFfMX-tRBJLfIMlL-55mVYg",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y interesado en la astronom\\u00eda y la f\\u00edsica con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 21,
+  "fields": {
+    "token": "id=4:1kucsb:d1Vvzqm4upusJel7Rk9HP-sEkPudoCbYsNSKrPMc4_k",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:52:07.256Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y interesado en la astronom\\u00eda y la f\\u00edsica con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "wagtail_headless_preview.pagepreview",
+  "pk": 22,
+  "fields": {
+    "token": "id=4:1kucsf:wNQI6kMI-wxH6sjo9qhh3JdtWGeEa3dqP1OTb_QxShk",
+    "content_type": [
+      "blog",
+      "perfilpage"
+    ],
+    "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"translation_key\": \"0d2b34c6-bfc2-49f3-a891-a25ae7521cce\", \"locale\": 1, \"title\": \"SaenGate\", \"draft_title\": \"SaenGate\", \"slug\": \"saengate\", \"content_type\": 44, \"live\": true, \"has_unpublished_changes\": true, \"url_path\": \"/home/saengate/\", \"owner\": 1, \"seo_title\": \"SaenGate\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2020-12-20T17:01:30.190Z\", \"last_published_at\": \"2020-12-30T14:52:07.394Z\", \"latest_revision_created_at\": \"2020-12-30T14:55:17.027Z\", \"live_revision\": 19, \"alias_of\": null, \"description\": \"<p>&quot;Quisiera cambiar el mundo pero no tengo el c\\u00f3digo fuente&quot;, en alguna parte le\\u00ed estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero inform\\u00e1tico, escritor ocasional de literatura fant\\u00e1stica, apasionado de los video juegos y interesado en la astronom\\u00eda y la f\\u00edsica con sed de aprender cada vez m\\u00e1s sobre nuestro universo.<br/></p><p>Mi objetivo con est\\u00e1 p\\u00e1gina es poner a prueba mis habilidades, por lo que a\\u00fan hay partes en construcci\\u00f3n que ir\\u00e1n evolucionando con el tiempo, adicionalmente ir\\u00e9 creando un blog con los detalles de cada secci\\u00f3n en donde en la medida de lo posible tambi\\u00e9n ir\\u00e9 dejando un repositorio p\\u00fablico como retribuci\\u00f3n a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta p\\u00e1gina esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. \\u00bfQuieres saber m\\u00e1s sobre como realice esta p\\u00e1gina? Contactame o lee el blog que estar\\u00e9 preparando en breve, en la secci\\u00f3n <b>blog</b>.<br/></p>\", \"photo\": null, \"created_at\": \"2020-12-20\", \"updated_at\": \"2020-12-20\"}",
+    "created_at": "2020-12-30"
+  }
+},
+{
+  "model": "home.homepage",
+  "pk": 3,
+  "fields": {}
+},
+{
+  "model": "blog.blogspage",
+  "pk": 6,
+  "fields": {
+    "intro": "Aquí empieza todo, esta es la primera entrada. Una pequeña prueba del modelo de para entradas del blog.",
+    "body": "<p>Y aquí empieza todo. El pase a producción de una página personal con un blog que ira evolucionando con el paso del tiempo. Acá intentaré explicar cada paso para crear la página web desde el desarrollo hasta el pase a producción con este proyecto.</p><p></p><p>Esta entrada podrá ser editada a futuro, es solo una prueba del pase local de contenido a producción usando django y wagtail.</p><p></p><p>¿Qué mal salir puede?</p>",
+    "created_at": "2020-12-20"
+  }
+},
+{
+  "model": "blog.perfilpage",
+  "pk": 4,
+  "fields": {
+    "description": "<p>&quot;Quisiera cambiar el mundo pero no tengo el código fuente&quot;, en alguna parte leí estas palabras y no pude olvidarlas, siendo ahora algo que considero una realidad que me define. Soy un ingeniero informático, escritor ocasional de literatura fantástica, apasionado de los video juegos y interesado en la astronomía y la física con sed de aprender cada vez más sobre nuestro universo.<br/></p><p>Mi objetivo con está página es poner a prueba mis habilidades, por lo que aún hay partes en construcción que irán evolucionando con el tiempo, adicionalmente iré creando un blog con los detalles de cada sección en donde en la medida de lo posible también iré dejando un repositorio público como retribución a lo que tanto me ha aportado el <b>open source</b>.</p><p></p><p>Esta página esta hecha con <b>Django</b> (wagtail), <b>Nuxt</b>, PostgreSQL, alojada en el cloud de <b>AWS</b>. ¿Quieres saber más sobre como realice esta página? Contactame o lee el blog que estaré preparando en breve, en la sección <b>blog</b>.<br/></p>",
+    "photo": null,
+    "created_at": "2020-12-20",
+    "updated_at": "2020-12-20"
+  }
+},
+{
+  "model": "blog.formfield",
+  "pk": 1,
+  "fields": {
+    "sort_order": 0,
+    "clean_name": "nombre",
+    "label": "Nombre",
+    "field_type": "singleline",
+    "required": true,
+    "choices": "",
+    "default_value": "",
+    "help_text": "Indique su nombre",
+    "page": 5
+  }
+},
+{
+  "model": "blog.formfield",
+  "pk": 2,
+  "fields": {
+    "sort_order": 1,
+    "clean_name": "apellido",
+    "label": "Apellido",
+    "field_type": "singleline",
+    "required": true,
+    "choices": "",
+    "default_value": "",
+    "help_text": "Indique su apellido",
+    "page": 5
+  }
+},
+{
+  "model": "blog.formfield",
+  "pk": 3,
+  "fields": {
+    "sort_order": 2,
+    "clean_name": "asunto",
+    "label": "Asunto",
+    "field_type": "singleline",
+    "required": true,
+    "choices": "",
+    "default_value": "",
+    "help_text": "Indique el motivo por el que desea comunicarse",
+    "page": 5
+  }
+},
+{
+  "model": "blog.formfield",
+  "pk": 4,
+  "fields": {
+    "sort_order": 3,
+    "clean_name": "correo_electronico",
+    "label": "Correo electrónico",
+    "field_type": "email",
+    "required": true,
+    "choices": "",
+    "default_value": "",
+    "help_text": "Indique su correo para recibir la respuesta, si es que la desea.",
+    "page": 5
+  }
+},
+{
+  "model": "blog.formfield",
+  "pk": 5,
+  "fields": {
+    "sort_order": 4,
+    "clean_name": "mensaje",
+    "label": "Mensaje",
+    "field_type": "multiline",
+    "required": true,
+    "choices": "",
+    "default_value": "",
+    "help_text": "Un espacio un poco más amplio para que dejes tu mensaje a mi persona.",
+    "page": 5
+  }
+},
+{
+  "model": "blog.contactpage",
+  "pk": 5,
+  "fields": {
+    "to_address": "saengatehost@gmail.com",
+    "from_address": "saengatehost@gmail.com",
+    "subject": "Contacto desde www.saengate.com",
+    "intro": "<p>Un espacio para dejarme un mensaje</p>",
+    "thank_you": "<p>Gracias por contactarme...</p>"
+  }
+}
+]
