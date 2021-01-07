@@ -107,6 +107,8 @@ Shell
 Debe existir un bucket en AWS S3
 Debes crear en VPC un endpoint para el servicio de S3
 # Deploy commands
+https://github.com/Miserlou/Zappa#advanced-usage
+
 * poetry lock --no-update
 * poetry export -n --without-hashes -f requirements.txt -o requirements.txt
 
@@ -149,6 +151,9 @@ zappa deploy production
       "SubnetIds": ["subnet-d742dcd9"],
       "SecurityGroupIds": [ "sg-0c277a37", "sg-09b054a57f1046265", "sg-0a72fc102701838e8", "sg-08459b51386be4d6b" ]
 },
+"keep_warm": false, luego hacer `zappa unschedule production` Evita que zappa haga solicitudes constantes a la función para mantenerla viva, esto reduce el coste de AWS pero hace que la función tarde en responder.
+Recomiendo revisar el link para reducir costos:
+https://aws.amazon.com/es/blogs/aws-spanish/10-cosas-que-puede-hacer-hoy-para-reducir-los-costos-de-aws/
 Hay problemas con el permiso en el rol que no permite agregarlo en el zappa hasta agregarlo directamente en las configuraciones de la función lambda. Puede que haga falta revisar los permisos que hacen falta agregar a alguno de los roles para resolver esto en el deploy o el update si esta la configuración voc_config: 
 
 """
