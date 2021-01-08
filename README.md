@@ -151,6 +151,7 @@ zappa deploy production
       "SubnetIds": ["subnet-d742dcd9"],
       "SecurityGroupIds": [ "sg-0c277a37", "sg-09b054a57f1046265", "sg-0a72fc102701838e8", "sg-08459b51386be4d6b" ]
 },
+Esto esta en prueba desde el 04-01-2021, para validar si en efecto reduce los costos.
 "keep_warm": false, luego hacer `zappa unschedule production` Evita que zappa haga solicitudes constantes a la función para mantenerla viva, esto reduce el coste de AWS pero hace que la función tarde en responder.
 Recomiendo revisar el link para reducir costos:
 https://aws.amazon.com/es/blogs/aws-spanish/10-cosas-que-puede-hacer-hoy-para-reducir-los-costos-de-aws/

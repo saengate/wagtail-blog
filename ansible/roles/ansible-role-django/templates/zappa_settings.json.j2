@@ -20,7 +20,10 @@
         "role_arn": "arn:aws:iam::808038115231:role/ZappaDjangoRole",
         "vpc_config" : {
             "SubnetIds": ["{{ subnet_ids }}"],
-            "SecurityGroupIds": [ "{{ security_group_ids }}" ]
+            "SecurityGroupIds": [{% for group_id in security_group_ids %}
+                "{{ group_id }}"{% if not loop.last %},{% endif %}
+                {% endfor %}
+            ]
         },
         "aws_environment_variables": {
             "ENV": "production",

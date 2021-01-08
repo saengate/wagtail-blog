@@ -32,7 +32,6 @@ RUN chmod og-wx ~/.ssh/authorized_keys
 # Install poetry y asegura que se instale el virtual en dentro de `path_venv`variable definida en ansible
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3
 ENV PATH="$PATH:/root/.poetry/bin"
-ENV AIRFLOW_HOME=/usr/local/airflow
 
 WORKDIR /tmp
 
@@ -45,6 +44,10 @@ RUN poetry lock --no-update
 RUN poetry export -n --without-hashes -f requirements.txt -o /tmp/requirements.txt --dev
 
 WORKDIR /tmp/ansible
+ENV ANSIBLE_KEY=$ANSIBLE_KEY
+ARG ANSIBLE_KEY=$ANSIBLE_KEY
+RUN touch /tmp/ansible/.key
+RUN echo $ANSIBLE_KEY >> /tmp/ansible/.key
 RUN service ssh start && ssh-keyscan -H localhost >>~/.ssh/known_hosts && ansible-playbook config-django.yml
 
 # Change UTC
