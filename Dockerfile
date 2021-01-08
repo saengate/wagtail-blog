@@ -13,8 +13,6 @@ RUN apt-get install zsh -qy
 RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 RUN git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 RUN sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
-COPY zshrc ~/.zshrc
-COPY p10k.zsh ~/.p10k.zsh
 
 # Install and configure SSH
 RUN mkdir /var/run/sshd
@@ -40,27 +38,28 @@ COPY ./pyproject.toml ./
 COPY ./ ./wagtailblog
 
 RUN sed -i 's|#!/usr/bin/env python|#!/usr/bin/env python3|g' ~/.poetry/bin/poetry
-RUN poetry lock --no-update
-RUN poetry export -n --without-hashes -f requirements.txt -o /tmp/requirements.txt --dev
+# RUN poetry lock --no-update
+# RUN poetry export -n --without-hashes -f requirements.txt -o /tmp/requirements.txt --dev
 
 WORKDIR /tmp/ansible
+ARG ANSIBLE_KEY
 ENV ANSIBLE_KEY=$ANSIBLE_KEY
-ARG ANSIBLE_KEY=$ANSIBLE_KEY
 RUN touch /tmp/ansible/.key
 RUN echo $ANSIBLE_KEY >> /tmp/ansible/.key
-RUN service ssh start && ssh-keyscan -H localhost >>~/.ssh/known_hosts && ansible-playbook config-django.yml
+RUN cat /tmp/ansible/.key
+# RUN service ssh start && ssh-keyscan -H localhost >>~/.ssh/known_hosts && ansible-playbook config-django.yml
 
 # Change UTC
 ENV TZ="America/Santiago"
 
 # INIT AWS config credentials
+ARG AWS_ACCESS
+ARG AWS_SECRET
+ARG AWS_REGION
+
 ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS
 ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET
 ENV AWS_DEFAULT_REGION=$AWS_REGION
-
-ARG AWS_ACCESS=$AWS_ACCESS
-ARG AWS_SECRET=$AWS_SECRET
-ARG AWS_REGION=$AWS_REGION
 
 RUN mkdir -p /root/.aws
 
@@ -71,6 +70,9 @@ RUN echo "aws_secret_access_key=${AWS_SECRET}" >> /root/.aws/credentials
 RUN echo "[default]" >> /root/.aws/config
 RUN echo "region=${AWS_REGION}" >> /root/.aws/config
 RUN echo "output=json" >> /root/.aws/config
+
+RUN cat /root/.aws/config
+RUN cat /root/.aws/credentials
 
 RUN chmod 600 /root/.aws/*
 # END AWS config credentials
