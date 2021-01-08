@@ -38,16 +38,15 @@ COPY ./pyproject.toml ./
 COPY ./ ./wagtailblog
 
 RUN sed -i 's|#!/usr/bin/env python|#!/usr/bin/env python3|g' ~/.poetry/bin/poetry
-# RUN poetry lock --no-update
-# RUN poetry export -n --without-hashes -f requirements.txt -o /tmp/requirements.txt --dev
+RUN poetry lock --no-update
+RUN poetry export -n --without-hashes -f requirements.txt -o /tmp/requirements.txt --dev
 
 WORKDIR /tmp/ansible
 ARG ANSIBLE_KEY
 ENV ANSIBLE_KEY=$ANSIBLE_KEY
 RUN touch /tmp/ansible/.key
 RUN echo $ANSIBLE_KEY >> /tmp/ansible/.key
-RUN cat /tmp/ansible/.key
-# RUN service ssh start && ssh-keyscan -H localhost >>~/.ssh/known_hosts && ansible-playbook config-django.yml
+RUN service ssh start && ssh-keyscan -H localhost >>~/.ssh/known_hosts && ansible-playbook config-django.yml
 
 # Change UTC
 ENV TZ="America/Santiago"
@@ -70,9 +69,6 @@ RUN echo "aws_secret_access_key=${AWS_SECRET}" >> /root/.aws/credentials
 RUN echo "[default]" >> /root/.aws/config
 RUN echo "region=${AWS_REGION}" >> /root/.aws/config
 RUN echo "output=json" >> /root/.aws/config
-
-RUN cat /root/.aws/config
-RUN cat /root/.aws/credentials
 
 RUN chmod 600 /root/.aws/*
 # END AWS config credentials
