@@ -53,12 +53,23 @@
 
     - name: Valida si la carpeta django esta en tmp
       stat:
-        path: /tmp/django
+        path: /tmp/wagtailblog
       register: django_folder
 
-    - name: Mover directorio a {{ project_name }}/{{ project_name }}
-      command: mv /tmp/django "{{ home }}"
+    - name: Mover directorio a {{ home }}/{{ project_name }}
+      command: mv /tmp/wagtailblog "{{ home }}"
       when: django_folder.stat.exists == true
+
+    - name: Mover configuraciones zappa a la carpeta temporal
+      template:
+        src: zappa_settings.json.j2
+        dest: /root/zappa_settings.json
+        owner: "{{ user }}"
+        group: "{{ group }}"
+        mode: 0755
+
+    - name: Mover directorio a Zappa a {{ home }}/{{ project_name }}
+      command: cp /root/zappa_settings.json "{{ home }}/{{ project_name }}/zappa_settings.json"
 
     - name: Creando archivo de log para el projecto
       file:
@@ -148,11 +159,3 @@
       file:
         path: /etc/nginx/conf.d/default.conf
         state: absent
-
-    - name: Mover configuraciones zappa a la carpeta temporal
-      template:
-        src: zappa_settings.json.j2
-        dest: /root/zappa_settings.json
-        owner: "{{ user }}"
-        group: "{{ group }}"
-        mode: 0755

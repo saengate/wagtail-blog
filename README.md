@@ -62,6 +62,10 @@ Adicionalmente puedes ejecutar este comando para entrar al entorno virtual del p
 ```sh
 source venv
 ```
+## Dockerfile
+
+ El archivo dockerfile usa entre sus herramientas de instalación `ansible`, dentro de la carpeta del mismo nombre encontrará el archivo [readme](ansible/readme.md) con el detalle de como usar esta herramienta, toda su estructura e información sobre la carpeta. Puedes usar esta información en caso de necesitar modificar la imagen y esta modificación resulte compleja de realizar directamente en docker o toque alguno de los archvios de configuración que se encuentran entre las plantillas, `ansible` -> `roles` -> `ansible-role-django` -> `templates`.
+
 
 ## Notas
 
@@ -85,6 +89,12 @@ Levantar contenedor con volumen de ansible
 ```sh
 docker run -v $(pwd)/ansible:/tmp/ansible -p 23:22 -p 8000:80 -p 5050:5555 -p 8001:8080 --rm -it --name djfullapp djfullapp
 ```
+
+docker build --build-arg AWS_ACCESS=$AWS_ACCESS --build-arg AWS_SECRET=$AWS_SECRET --build-arg AWS_REGION=$AWS_REGION --build-arg ANSIBLE_KEY=$ANSIBLE_KEY  --no-cache -t django .
+
+docker run -e SECRET_KEY=${SECRET_KEY} -v $(pwd)/ansible:/tmp/ansible --rm -it --name django django bash
+docker run -e SECRET_KEY=${SECRET_KEY} --rm -it --name django django bash -c "source /opt/venv/bin/activate && ./manage.py test";
+
 
 Para validar que los servicios estan arriba al usar docker
 ```sh
@@ -191,3 +201,5 @@ zappa invoke --raw production "from django.contrib.auth.models import User; User
 ],
 
 zappa manage production "loaddata ./fixtures/data.json"
+
+
