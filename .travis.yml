@@ -24,7 +24,7 @@ before_script:
 # Si este script falla puede deberse a que se cambio la raiz o el nombre del proyecto en el dockerfile
 script:
   - docker run
-    -e SECRET_KEY=${SECRET_KEY} --rm -it --name django django
+    -e SECRET_KEY=$SECRET_KEY --rm -it --name django django
     bash -c "source /opt/venv/bin/activate && ./manage.py test";
 
 after_script:
