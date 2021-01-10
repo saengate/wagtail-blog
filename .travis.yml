@@ -7,18 +7,25 @@ services:
 
 env:
   global:
-  - "DOCKER_COMPOSE_VERSION=1.23.2"
+    - "DOCKER_COMPOSE_VERSION=1.23.2"
 
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y openssl
 
 before_script:
-  - docker build -t django .
+  - docker build
+    --build-arg AWS_ACCESS=$AWS_ACCESS
+    --build-arg AWS_SECRET=$AWS_SECRET
+    --build-arg AWS_REGION=$AWS_REGION
+    --build-arg ANSIBLE_KEY=$ANSIBLE_KEY
+    --no-cache -t django .
 
 # Si este script falla puede deberse a que se cambio la raiz o el nombre del proyecto en el dockerfile
 script:
-  - docker run --rm -it --name django django /bin/bash -c "source /opt/venv/bin/activate && ./manage.py test";
+  - docker run
+    -e SECRET_KEY=${SECRET_KEY} -it --name django django
+    bash -c "echo ${SECRET_KEY} && source /opt/venv/bin/activate && ./manage.py test";
 
 after_script:
   - docker container stop django

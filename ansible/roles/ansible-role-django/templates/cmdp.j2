@@ -44,6 +44,7 @@ createadmin()
     source {{ path_venv }}/bin/activate;
     cd {{ home }}/{{ project_name }};
     echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_superuser('{{django_user}}', '{{django_email}}', '{{django_password}}')" | ./manage.py shell;
+    echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_user('contact', 'contact@saengate.com', 'contact')" | ./manage.py shell;
 }
 
 translate()
@@ -56,7 +57,7 @@ translate()
 logdjango()
 {
     echo "${GREEN}Logs del projecto${NC}";
-    tail -100f /var/log/django/django.log;
+    tail -100f /var/log/wagtailblog/wagtailblog.log;
 }
 
 logsupervisor()
