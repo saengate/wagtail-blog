@@ -18,7 +18,7 @@ keywords = ['packaging', 'poetry']
 
 [tool.poetry.dependencies]
 # https://python-poetry.org/docs/dependency-specification/
-Django = "^3.0"
+Django = "^3.1"
 Pillow = "^7.2"
 asgiref = "^3.2"
 aws-psycopg2 = "^1.2"
