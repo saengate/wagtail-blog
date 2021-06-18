@@ -18,8 +18,8 @@ keywords = ['packaging', 'poetry']
 
 [tool.poetry.dependencies]
 # https://python-poetry.org/docs/dependency-specification/
-Django = "^3.0"
-Pillow = "^7.2"
+Django = "^3.1"
+Pillow = "^8.2"
 asgiref = "^3.2"
 aws-psycopg2 = "^1.2"
 awscli = "^1.18"
@@ -50,8 +50,8 @@ python-slugify = "^4.0"
 redis = "^3.2"
 requests = "^2.22"
 termcolor = "^1.1"
-urllib3 = "^1.24.1"
-wagtail = "^2.10"
+urllib3 = "^1.26.5"
+wagtail = "^2.11"
 wagtail-cache = "^1.0"
 wagtail-headless-preview = "^0.1.4"
 zappa = "^0.52.0"

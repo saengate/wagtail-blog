@@ -179,7 +179,6 @@ zappa status production
 
 zappa undeploy production --remove-logs
 
-https://61z6izm5mj.execute-api.us-east-1.amazonaws.com/production
 
 
 
@@ -187,11 +186,14 @@ https://61z6izm5mj.execute-api.us-east-1.amazonaws.com/production
 https://stackoverflow.com/questions/19331497/set-environment-variables-from-file-of-key-value-pairs/19331521
 
 
-
+En local:
 echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.create_user('saengate', 'saengate@gmail.com', 'saengate')" | ./manage.py shell
-zappa invoke --raw production "from django.contrib.auth.models import User; User.objects.create_superuser('saengate', 'saengate@gmail.com', 'A9dwKyHUfQyoh7KymWcbWiC47reUYLVWF6mZQzdMhvwQUFBRQdxEBHwVosR3FG4UVCwJb6R7QQdkGtUCwzxUTf63vpHWEV4FL23j')";
-zappa invoke --raw production "from django.contrib.auth.models import User; User.objects.create_superuser('contact', 'contact@saengate.com', 'contact')"
+En producción:
+zappa invoke --raw production "from django.contrib.auth.models import User; User.objects.create_superuser('saengate', 'saengate@gmail.com', 'secret-password')";
+zappa invoke --raw production "from django.contrib.auth.models import User; User.objects.create_superuser('contact', 'contact@saengate.com', 'secret-password')"
 
+
+Modificar el fixture para que el usuario coincida
 "user": [
 "saengate"
 ]
