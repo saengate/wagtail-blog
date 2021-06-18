@@ -37,7 +37,6 @@ COPY ./ansible ./ansible
 COPY ./pyproject.toml ./
 COPY ./ ./wagtailblog
 
-# RUN sed -i 's|#!/usr/bin/env python|#!/usr/bin/env python3|g' ~/.poetry/bin/poetry
 RUN poetry lock --no-update
 RUN poetry export -n --without-hashes -f requirements.txt -o /tmp/requirements.txt --dev
 
